@@ -226,7 +226,7 @@ void List::print_reverse() const {
  	Node* new_node = new Node(value);
  	Node* next_node;
  	int position = 0;
- 	bool valid_position = false;	
+ 	bool placed = false;	
 
 	for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
 		next_node = iter.get_curr_pos()->get_next();
@@ -239,15 +239,19 @@ void List::print_reverse() const {
 			// Update previous pointers
 			next_node->set_prev(new_node);
 			new_node->set_prev(iter.get_curr_pos());
-			valid_position = true;
+			placed = true;
 			break;
 		}
 	}
 
-	// Check if Position was valid
-	if (!valid_position) {
-		cout << "\nSorry, the position you entered is invalid" << endl;
-	} 	
+	if (!placed) {
+		if (i < 50) {
+			push_front(value);
+		}
+		else {
+			push_back(value);
+		}
+	}	
 
  }
 
@@ -256,7 +260,7 @@ void List::print_reverse() const {
  	Node* new_node = new Node(value);
  	Node* previous_node;
  	int position = 0;
- 	bool valid_position = false;	
+ 	bool placed = false;	
 
 	for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
 		previous_node = iter.get_curr_pos()->get_prev();
@@ -269,14 +273,18 @@ void List::print_reverse() const {
 			// Update previous pointers
 			new_node->set_prev(previous_node);
 			iter.get_curr_pos()->set_prev(new_node);
-			valid_position = true;
+			placed = true;
 			break;
 		}
 	}
 
-	// Check if Position was valid
-	if (!valid_position) {
-		cout << "\nSorry, the position you entered is invalid" << endl;
+	if (!placed) {
+		if (i < 50) {
+			push_front(value);
+		}
+		else {
+			push_back(value);
+		}
 	}
 
  }
