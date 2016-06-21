@@ -1,0 +1,2 @@
+# DataStructures
+Introduction to Data Structures and Algorithms. Topics include basic data structures such as arrays, lists, stacks, and queues; dictionaries including binary search trees and hashing; priority queues (heaps); introductory analysis of algorithms; sorting algorithms; and object-oriented programming including abstract data types, inheritance, and polymorphism. Also covers solving complex problems through structured software development.
