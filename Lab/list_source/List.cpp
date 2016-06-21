@@ -159,6 +159,14 @@ Iterator List::end()const
 	return iter;
 }
 
+Iterator List::betterEnd()const
+{
+	Iterator iter;
+	iter.set_curr_pos(get_tail());
+	iter.set_last_pos(get_tail());
+	return iter;
+}
+
 void List::sorted_insert(int value) {
 	
 	Node* new_node = new Node(value);	// Create new Node with desired value
@@ -205,11 +213,85 @@ void List::print_reverse() const {
 		return;
 	}
 	
-	for(Iterator iter = end(); !iter.is_equal(begin()); iter.prev_pos())
+	for(Iterator iter = betterEnd(); iter.get_curr_pos()!=NULL; iter.prev_pos())
 	{
 		cout << iter.get_value() << ", ";
 	}
 	cout << "\n";
 
 }
+
+ void List::insertAfter(int i, int value) {
+
+ 	Node* new_node = new Node(value);
+ 	Node* next_node;
+ 	int position = 0;
+ 	bool valid_position = false;	
+
+	for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
+		next_node = iter.get_curr_pos()->get_next();
+		position++;
+		if (i == position) {
+			// Update next pointers
+			new_node->set_next(next_node);
+			iter.get_curr_pos()->set_next(new_node);
+
+			// Update previous pointers
+			next_node->set_prev(new_node);
+			new_node->set_prev(iter.get_curr_pos());
+			valid_position = true;
+			break;
+		}
+	}
+
+	// Check if Position was valid
+	if (!valid_position) {
+		cout << "\nSorry, the position you entered is invalid" << endl;
+	} 	
+
+ }
+
+ void List::insertBefore(int i, int value) {
+
+ 	Node* new_node = new Node(value);
+ 	Node* previous_node;
+ 	int position = 0;
+ 	bool valid_position = false;	
+
+	for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
+		previous_node = iter.get_curr_pos()->get_prev();
+		position++;
+		if (i == position) {
+			// Update next pointers
+			new_node->set_next(iter.get_curr_pos());
+			previous_node->set_next(new_node);
+
+			// Update previous pointers
+			new_node->set_prev(previous_node);
+			iter.get_curr_pos()->set_prev(new_node);
+			valid_position = true;
+			break;
+		}
+	}
+
+	// Check if Position was valid
+	if (!valid_position) {
+		cout << "\nSorry, the position you entered is invalid" << endl;
+	}
+
+ }
+
+  int List::count(int value) const {
+
+  	int count = 0;
+
+  	for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
+  		if (iter.get_value() == value) {
+  			count++;
+  		}
+  	}
+
+  	return count;
+
+  }
 

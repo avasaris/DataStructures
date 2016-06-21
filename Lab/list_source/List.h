@@ -26,6 +26,10 @@ public:
 	/* These functions are all yours! */
 	void sorted_insert(int value);
 	void print_reverse()const;
+	Iterator betterEnd()const;
+	void insertAfter(int i, int value);
+	void insertBefore(int i, int value);
+	int count(int value) const;
 	
 private:
 	Node* head;

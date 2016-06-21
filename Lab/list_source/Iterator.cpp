@@ -90,4 +90,9 @@ void Iterator::next_pos()
 	set_curr_pos(get_curr_pos()->get_next());
 }
 
+void Iterator::prev_pos() {
 
+	//assert(get_curr_pos() != NULL);
+	set_curr_pos(get_curr_pos()->get_prev());
+
+}
