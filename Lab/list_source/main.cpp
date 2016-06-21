@@ -28,16 +28,17 @@ int main()
 	cout << "\nPushing back first " << fibo_number << " Fibonacci numbers:";
 	for(int i = 0; i < fibo_number; i++)
 	{
-		myList.push_back(fibonacci(i));
+		myList.sorted_insert(fibonacci(i));
 		myList.print();
 	}
-	
+	/*
 	cout << "\nReverse myList pushing front contents of myList into myList2:";
 	for(Iterator iter = myList.begin(); !iter.is_equal(myList.end()); iter.next_pos())
 	{
 		myList2.push_front(iter.get_value());
 		myList2.print();
 	}
+	*/
 		
 	return 0;
 }

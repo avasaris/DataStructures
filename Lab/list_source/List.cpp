@@ -159,4 +159,57 @@ Iterator List::end()const
 	return iter;
 }
 
+void List::sorted_insert(int value) {
+	
+	Node* new_node = new Node(value);	// Create new Node with desired value
+	Node* previous_node = NULL;			// Create pointer for previous node, initially set to NULL
+
+	/* list is empty */
+	if(!head) {
+		push_front(value);
+	}
+	else {
+		for( Iterator iter = begin(); !iter.is_equal(end()); iter.next_pos()) {
+			if (iter.get_value() >= value) {
+				// Check if new node will be new head of list
+				if (iter.get_curr_pos() == head) {
+					push_front(value);
+				}
+				else {
+					// update next pointers
+						new_node->set_next(iter.get_curr_pos());
+						previous_node->set_next(new_node);
+					// update previous pointers
+						new_node->set_prev(previous_node);
+						iter.get_curr_pos()->set_prev(new_node);
+				}
+				break;
+			}
+			else if ((iter.get_curr_pos() == tail)) {			// Check if new node should be placed at the end of the list
+				push_back(value);
+				break;
+			}
+			previous_node = iter.get_curr_pos(); //update previous position
+		}
+	}
+}
+
+void List::print_reverse() const {
+
+	cout << "\nReverse List contents:\n";
+
+	/* list is empty */
+	if(!head)
+	{
+		cout << "empty\n";
+		return;
+	}
+	
+	for(Iterator iter = end(); !iter.is_equal(begin()); iter.prev_pos())
+	{
+		cout << iter.get_value() << ", ";
+	}
+	cout << "\n";
+
+}
 
