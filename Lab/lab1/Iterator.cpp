@@ -1,8 +1,21 @@
-/**
- * UCR CS&E
- * CS014 Lab 1
- * Iterator.cpp
- */
+ /**
+ * Course: CS 14 Summer 2016
+ *
+ * First Name: Courtney 
+ * Last Name: Kelly
+ * Username: ckell015
+ * email address: ckell015
+ *
+ *
+ * Assignment: lab1
+ * Filename : Iterator.cpp
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */ 
 
 #include <cstdlib>
 #include <cassert>
@@ -90,6 +103,11 @@ void Iterator::next_pos()
 	set_curr_pos(get_curr_pos()->get_next());
 }
 
+/**
+ * Advances iterator to the previous node
+ * @param none
+ * @return none
+ */
 void Iterator::prev_pos() {
 
 	//assert(get_curr_pos() != NULL);

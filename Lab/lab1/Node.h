@@ -1,8 +1,21 @@
 /**
- * UCR CS&E
- * CS014 Lab 1
- * Node.h
- */
+ * Course: CS 14 Summer 2016
+ *
+ * First Name: Courtney 
+ * Last Name: Kelly
+ * Username: ckell015
+ * email address: ckell015
+ *
+ *
+ * Assignment: lab1
+ * Filename : Node.h
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */ 
 
 #ifndef NODE_H_
 #define NODE_H_

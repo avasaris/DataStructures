@@ -1,8 +1,21 @@
 /**
- * UCR CS&E
- * CS014 Lab 1
- * main.cpp
- */
+ * Course: CS 14 Summer 2016
+ *
+ * First Name: Courtney 
+ * Last Name: Kelly
+ * Username: ckell015
+ * email address: ckell015
+ *
+ *
+ * Assignment: lab1
+ * Filename : main.cpp
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */ 
 
 #include <iostream>
 #include "List.h"
@@ -17,30 +30,6 @@ using namespace std;
 
 int main()
 {
-	
-	/* Instantiate two Lists */
-	/*List myList;
-	List myList2;
-	*/
-	/* Try to print an empty List */
-	/*cout << "\nTest printing an empty list:";
-	myList.print();
-	
-	cout << "\nPushing back first " << fibo_number << " Fibonacci numbers:";
-	for(int i = 0; i < fibo_number; i++)
-	{
-		myList.push_back(fibonacci(i));
-		myList.print();
-	}
-	
-	cout << "\nReverse myList pushing front contents of myList into myList2:";
-	for(Iterator iter = myList.begin(); !iter.is_equal(myList.end()); iter.next_pos())
-	{
-		myList2.push_front(iter.get_value());
-		myList2.print();
-	}
-	
-	*/	
 	
 	List myList3;
 	List myList4;
