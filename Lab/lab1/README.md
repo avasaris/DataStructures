@@ -16,14 +16,14 @@ Functions
 1. **void List::sorted_insert(int value)** 
 Takes an integer value inserts it into the list as a new node in the list. This insert_sort should preserve the increasing ordering of the list, i.e. if you were to insert a 5, then the new node would have a value of 5 and be inserted after the highest integer less than 5 and before any integer equal to or greater than 5. You can  assume that the list is already sorted, though might be empty or have one element.
 
-2. List::print_reverse() const 
+2. **List::print_reverse() const** 
 Prints the contents of a list backwards
 
-3. List::insertAfter(int i, int value) 
+3. **List::insertAfter(int i, int value)** 
 Inserts a node with specified value at position i+1 in the list
 
-4. void List::insertBefore(int i, int value) 
+4. **void List::insertBefore(int i, int value)** 
 Inserts a node with specified value at position i­1 in the list.
 
-5. int List::count(int value) const 
+5. **int List::count(int value) const**
 Returns the number of times value appears in the list.
