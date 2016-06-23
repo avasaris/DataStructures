@@ -41,7 +41,9 @@ const List &List::operator=( const List &right ) {
 
         // Get new space
             int length = right.size();
-            Node* node_pointers[ length ];
+            Node* node_pointers[ length + 1];
+            node_pointers[ length + 1 ] = NULL;
+
             for (int i=0; i<length; i++) {
               node_pointers[i] = new Node;
             }
@@ -53,7 +55,7 @@ const List &List::operator=( const List &right ) {
             head->value = node_to_copy->value;
             head->next = node_pointers[1];
 
-            for (int i=1; i<(length-1); i++) {
+            for (int i=1; i<(length); i++) {
               node_to_copy = node_to_copy->next;
               node_pointers[i]->value = node_to_copy->value;
               node_pointers[i]->next = node_pointers[i+1];
