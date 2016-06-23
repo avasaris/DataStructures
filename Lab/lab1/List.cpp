@@ -216,7 +216,7 @@ void List::sorted_insert(int value) {
 							new_node->set_prev(previous_node);
 							iter.get_curr_pos()->set_prev(new_node);
 					}
-					break;
+					break;n
 				}
 				else if ((iter.get_curr_pos() == tail)) {	// Check if new node should be placed at the end of the list
 					push_back(value);						// if it is the new end of the list, push to the back

@@ -4,7 +4,7 @@
  * assn 1
  */
 
-#include "node.h"
+#include "Node.h"
 #include <iostream>
 
 using namespace std;
@@ -36,11 +36,14 @@ public:
 	void print()const;
 	int  find(char value)const;
 	int  find(MyList& query_str)const;
+	Node* get_head() const;
 
 	/* Operator overloads */
 	MyList operator=(const MyList& str);
 	char& operator[](const int i);
 	MyList operator+(const MyList& str);
+
+	void debugger( string message ) const;
 };
 
 #endif /* MYLIST_H_ */
