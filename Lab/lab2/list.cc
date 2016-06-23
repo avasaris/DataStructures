@@ -41,7 +41,7 @@ const List &List::operator=( const List &right ) {
 
         // Get new space
             int length = right.size();
-            Node* node_pointers[ length ];
+            Node* node_pointers[ length + 1];
             for (int i=0; i<length; i++) {
               node_pointers[i] = new Node;
             }
