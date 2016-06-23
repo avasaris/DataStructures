@@ -53,7 +53,7 @@ const List &List::operator=( const List &right ) {
             head->value = node_to_copy->value;
             head->next = node_pointers[1];
 
-            for (int i=1; i<(length-1); i++) {
+            for (int i=1; i<(length); i++) {
               node_to_copy = node_to_copy->next;
               node_pointers[i]->value = node_to_copy->value;
               node_pointers[i]->next = node_pointers[i+1];
