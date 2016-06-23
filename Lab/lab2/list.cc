@@ -28,8 +28,47 @@ List::~List ( ) {
 
 //------------------------------------------------------------------------
 
+const List &List::operator=( const List &right ) {
+
+    if ( &right != this ) {   // Avoid self assignment
+
+        // Delete Associated Memory
+            Node* next;
+            for ( Node* temp = head; temp != NULL; temp = next ) {
+              next = temp->next;
+              delete temp;
+            }
+
+        // Get new space
+            int length = right.size();
+            Node* node_pointers[ length ];
+            for (int i=0; i<length; i++) {
+              node_pointers[i] = new Node;
+            }
+
+        // Copy
+            Node* node_to_copy = right.head;
+
+            head = node_pointers[0];
+            head->value = node_to_copy->value;
+            head->next = node_pointers[1];
+
+            for (int i=1; i<(length-1); i++) {
+              node_to_copy = node_to_copy->next;
+              node_pointers[i]->value = node_to_copy->value;
+              node_pointers[i]->next = node_pointers[i+1];
+            }
+
+    }  
+
+    return *this;
+
+}
+
+//------------------------------------------------------------------------
+
 int 
-List::size ( ) {
+List::size ( ) const {
   int size = 0;
   for ( Node* temp = head; temp != NULL; temp = temp->next ) {
     size ++;

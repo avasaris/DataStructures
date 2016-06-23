@@ -13,11 +13,12 @@ private:
 public:
   List ( );
   ~List ( );
-  int size ( );
+  int size ( ) const ;
   void push_front ( int );
   void push_back ( int );
   void print ( );
-  // Add new member function declarations here
+  
+  const List &operator=( const List & );	// overload assignment operator
 };
 
 #endif
