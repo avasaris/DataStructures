@@ -10,14 +10,13 @@ int main() {
 	//string str = "string one";
 	//MyList courtney(str);
 
-	//courtney.pop_back();
-	//MyList list3(courtney);
-
 	MyList katie("courtney");
 	katie.push_back('8');
 	katie.push_front('5');
 	katie.pop_front();
 	katie.pop_back();
+
+	MyList list3(katie);
 
 	//katie.swap(1, 12);
 	katie.insert_at_pos(11, 'B');

@@ -42,17 +42,37 @@ MyList::MyList()
 	head = NULL;
 }
 
-/*	Nondefault Constructor
+/*	Copy Constructor
 	@param str: object of type MyList
 */
-MyList::MyList(const MyList& str) {
+MyList::MyList(const MyList& myListToCopy) {
 
 	debugger("MyList object passed through Constructor...");
 	
-	head = str.get_head();
+	// Get new space
+        int length = myListToCopy.size();     // get the size of the list to be copied
+        	debugger("left size function...");
+        Node* node_pointers[ length ];      // create an array of pointers to Node objects
 
-	cout << "MyList Constructor head: " << head->get_value() << endl;
-	cout << "MyList Constructor next: " << head->get_next()->get_value() << endl;
+        for (int i=0; i<length; i++) {      // Initialize array of pointers with correct number of Nodes
+            node_pointers[i] = new Node;
+        }
+
+    // Copy
+        Node* node_to_copy = myListToCopy.head;    // Get the head of the list to be copied in temporary node to loop through
+
+        head = node_pointers[0];            // Redirect head pointer to beginning of new Node pointers array
+        head->value = node_to_copy->value;  // assign the head's value from the copy node
+        head->next = node_pointers[1];      // assign the head's next pointer to next element in Node pointers array
+
+        for (int i=1; i<(length-1); i++) {  // fill in the rest of Nodes with correct values and next pointers
+            node_to_copy = node_to_copy->next;
+            node_pointers[i]->value = node_to_copy->value;
+            node_pointers[i]->next = node_pointers[i+1];
+        }
+
+        node_to_copy = node_to_copy->next;                          // last element needs to be done outside of loop 
+        node_pointers[length-1]->value = node_to_copy->value;       // bc it's next pointer needs to point to NULL
 
 }
 
@@ -132,26 +152,24 @@ MyList::~MyList()
  */
 void MyList::push_front(char value)
 {
-	Node* new_node = new Node(value);
-		
-	/* list is empty */
-	if(!head)
-	{
-		head = new_node;
-	}
-	else
-	{
-		new_node->set_next(head);
-		head = new_node;			
-	}
+	debugger("push_front function called...");
+	/*
+	Node* new_node = new Node(value);	
+	new_node->set_next(head);
+	head = new_node;*/
+
+	Node* insert = new Node;
+  	insert->value = value;
+  	insert->next = head;
+  	head = insert;			
+	
 }
 
 void MyList::push_back(char value) {
 	
 	debugger("push_back function called...");
+	/*
 	Node* new_node = new Node(value);
-	
-	/* list is empty */
 	if(!head)
 	{
 		head = new_node;
@@ -164,7 +182,20 @@ void MyList::push_back(char value) {
 			last = temp;
 		}
 		last->set_next(new_node);
-	}
+	} */
+
+	if ( size() == 0 ) {
+    	push_front ( value );
+  	}
+  	else {
+	    Node* tail;
+	    for ( tail = head; tail->next != NULL; tail = tail->next ) {
+		    Node* insert = new Node;
+		    insert->value = value;
+		    insert->next = NULL;
+		    tail->next = insert;
+		}
+  	}
 }
 
 void MyList::pop_front() {
@@ -285,13 +316,21 @@ void MyList::reverse() {
 int MyList::size() const {
 
 	debugger("size function called...");
+	/*
 	int count = 0;
 	Node* temp;
 	for (temp=head; temp != NULL; temp=temp->get_next()) {
 		count++;
 	}
 
-	return count;
+	return count;*/
+
+	int size = 0;
+	for ( Node* temp = head; temp != NULL; temp = temp->next ) {
+		debugger("In size function for loop...");
+		size ++;
+	}
+	return size;
 
 }
 
