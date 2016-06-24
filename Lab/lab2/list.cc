@@ -64,7 +64,6 @@ const List &List::operator=( const List &right ) {
 		
             node_to_copy = node_to_copy->next;                          // last element needs to be done outside of loop 
             node_pointers[length-1]->value = node_to_copy->value;       // bc it's next pointer needs to point to NULL
-            delete node_to_copy;                // delete temporary node
     }   
 
     return *this;   // return yourself (basically)
