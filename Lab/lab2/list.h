@@ -12,7 +12,7 @@ private:
 
 public:
   List ( );
-  //List( const List & );		// copy constructor
+  List( const List & );		// copy constructor
   ~List ( );
   const List &operator=( const List & );	// overload assignment operator
   int size ( ) const;
