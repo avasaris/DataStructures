@@ -18,14 +18,6 @@ List::List ( ) {
 List::~List ( ) {
 
   // ADD: to avoid memory leaks, make sure you delete all allocated memory
-    /*
-    if (head != NULL) {
-        Node* next;
-        for ( Node* temp = head; temp != NULL; temp = next ) {
-            next = temp->next;
-            delete temp;
-        }
-    }*/
 
     cout << "\nList Destructor called...\n";
     while(head) {
@@ -51,14 +43,12 @@ const List &List::operator=( const List &right ) {
 
         // Get new space
             int length = right.size();
-            Node* node_pointers[ length + 1];
-
+            Node* node_pointers[ length ];
+	    
+	    // Initialize array of pointers with correct number of Nodes
             for (int i=0; i<length; i++) {
               node_pointers[i] = new Node;
             }
-
-            node_pointers[length] = NULL;
-            node_pointers[length+1] = NULL;
 
         // Copy
             Node* node_to_copy = right.head;
