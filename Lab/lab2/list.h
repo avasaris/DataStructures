@@ -12,13 +12,13 @@ private:
 
 public:
   List ( );
+  //List( const List & );		// copy constructor
   ~List ( );
-  int size ( ) const ;
+  const List &operator=( const List & );	// overload assignment operator
+  int size ( ) const;
   void push_front ( int );
   void push_back ( int );
   void print ( );
-  
-  const List &operator=( const List & );	// overload assignment operator
 };
 
 #endif
