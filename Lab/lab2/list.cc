@@ -17,7 +17,7 @@ List::List ( ) {
 List::List( const List &listToCopy ) {
 
     // Get new space
-        int length = listToCopy.size();          // get the size of the list to be copied
+        int length = listToCopy.size();     // get the size of the list to be copied
         Node* node_pointers[ length ];      // create an array of pointers to Node objects
 
         for (int i=0; i<length; i++) {      // Initialize array of pointers with correct number of Nodes
