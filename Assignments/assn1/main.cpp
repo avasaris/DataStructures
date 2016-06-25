@@ -140,6 +140,7 @@ int main() {
 	cout << "list7[4]: " << list7[4] << endl;
 	cout << "list7[100]: " << list7[100];
 
+	/*
 	// Addition Operator Overload
 	cout << "\n\nAddition Operator Overload:" << endl;
 	MyList list8("Robb Stark");
@@ -154,6 +155,7 @@ int main() {
 	list8.print();
 	cout << "List 9: ";
 	list9.print();
+	*/
 	
 
 	return 0;
