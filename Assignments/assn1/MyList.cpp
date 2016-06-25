@@ -275,7 +275,8 @@ void MyList::swap( int i, int j ) {
 void MyList::insert_at_pos(int i, char value) {
 	debugger("insert_at_pos function called...");
 
-	Node* new_node = new Node(value);	// Create new Node with desired value
+	Node* new_node = new Node;	// Create new Node with desired value
+	new_node->value = value;
 	Node* previous_node = NULL;			// Create pointer for previous node, initially set to NULL
 
 	int position=0;
