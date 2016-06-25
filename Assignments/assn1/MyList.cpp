@@ -109,7 +109,8 @@ MyList::MyList(const char* str) {
 		Node* node_pointers[length];			// Create an array of pointers to objects of type Node
 
 		for (int i=0; i<length; i++) {			// Fill array with pointers of type Node
-			node_pointers[i] = new Node(str[i]);
+			node_pointers[i] = new Node;
+			node_pointers[i]->value = str[i];
 		}
 
 	// Copy to new space 
