@@ -166,7 +166,8 @@ void MyList::push_front(char value) {
 void MyList::push_back(char value) {
 	debugger("push_back function called...");
 	
-	Node* new_node = new Node(value);
+	Node* new_node = new Node;
+	new_node->value = value;
 	if(!head)
 	{
 		head = new_node;
