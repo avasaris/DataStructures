@@ -117,7 +117,8 @@ int main() {
 	list5.print();
 	list5.reverse();
 	list5.print();
-
+	
+	
 	// Assignment Operator Overload
 	cout << "\n\nAssignment Operator Overload:" << endl;
 	MyList list6("Brandon Stark");
@@ -132,15 +133,18 @@ int main() {
 	list6.print();
 	cout << "List 7: ";
 	list7.print();
+	
+
 
 	// Bracket Operator Overload
 	cout << "\n\nBracket [] Operator Overload:" << endl;
 	cout << "List 7: ";
 	list7.print();
 	cout << "list7[4]: " << list7[4] << endl;
-	cout << "list7[100]: " << list7[100];
-
-	/*
+	cout << "list7[100]: ";
+	cout << list7[100];
+	
+	
 	// Addition Operator Overload
 	cout << "\n\nAddition Operator Overload:" << endl;
 	MyList list8("Robb Stark");
@@ -155,7 +159,7 @@ int main() {
 	list8.print();
 	cout << "List 9: ";
 	list9.print();
-	*/
+	
 	
 
 	return 0;

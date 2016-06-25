@@ -492,7 +492,8 @@ const MyList &MyList::operator=( const MyList &right ) {
 		
             node_to_copy = node_to_copy->next;                          // last element needs to be done outside of loop 
             node_pointers[length-1]->value = node_to_copy->value;       // bc it's next pointer needs to point to NULL
-    }   
+    	    node_pointers[length-1]->next = NULL;
+	}   
 
     return *this;   // return yourself (basically)
 }
@@ -500,9 +501,11 @@ const MyList &MyList::operator=( const MyList &right ) {
 char& MyList::operator[](const int i) {
 	debugger("Bracket operator overload function called...");
 
+	char blank = ' ';
 	int position=0;
 	if (i<0 || (i>size())) {
 		cout << "You cannot access that position, it doesn't exist" << endl;
+		return blank;
 	}
 	else {
 		Node* temp;
