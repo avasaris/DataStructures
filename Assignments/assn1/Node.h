@@ -12,6 +12,7 @@ class Node {
 	private:
 	  	Node* next;
 	  	char value;
+	  	/*
 	public:
 		Node();
 		Node(char value);
@@ -20,6 +21,7 @@ class Node {
 		char get_value() const;
 		void set_next(Node*);
 		void set_value(char value);
+		*/
 };
 
 #endif /* NODE_H_ */

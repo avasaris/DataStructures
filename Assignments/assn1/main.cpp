@@ -1,7 +1,5 @@
 #include <iostream>
-#include <string>
 #include "MyList.h"
-#include "Node.h"
 
 using namespace std;
 
