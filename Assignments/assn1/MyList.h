@@ -39,9 +39,9 @@ public:
 	Node* get_head() const;
 
 	/* Operator overloads */
-	MyList operator=(const MyList& str);
+	const MyList &operator=( const MyList & );
 	char& operator[](const int i);
-	MyList operator+(const MyList& str);
+	MyList operator+( MyList & );
 
 	void debugger( string message ) const;
 };
