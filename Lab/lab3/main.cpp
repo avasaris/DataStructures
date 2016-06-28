@@ -7,24 +7,6 @@
 using namespace std;
 
 int main( int argc, char * argv[] ) {
-
-	cout << "\nTesting Stack Class:" << endl;
-	Stack MyStack; 
-
-	MyStack.push(5);
-	MyStack.push(10);
-	MyStack.push(2);
-	MyStack.push(7);
-	MyStack.push(8);
-	MyStack.print();
-	cout << "top: " << MyStack.top() << endl << endl;
-	MyStack.pop();
-	MyStack.print();
-	cout << "top: " << MyStack.top() << endl << endl;
-	MyStack.pop();
-	MyStack.pop();
-	MyStack.print();
-	cout << "top: " << MyStack.top() << endl << endl;
 	
 	cout << "Reverse Polish Notation Evaluation:\n";
 
@@ -34,7 +16,7 @@ int main( int argc, char * argv[] ) {
 	else {
 		ifstream InFile (argv[1]);
 		if (InFile.is_open()) {
-			Stack Numbers;
+			Stack<int> Numbers;
 			char c;
 			while (InFile.get(c)) {
 				if (isdigit(c)) {

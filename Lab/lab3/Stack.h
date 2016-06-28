@@ -3,13 +3,14 @@
 
 #define CAPACITY 25
 
+template <typename T>
 class Stack {
 	public:
 		Stack();
 		~Stack();
-		void push(const int& x); 	// adds a new element x at the top of the stack.
+		void push(const T& x); 	// adds a new element x at the top of the stack.
 
-		int& top(); 				// Returns a reference to the next(top) element in the stack,
+		T& top(); 				// Returns a reference to the next(top) element in the stack,
 									// if the stack is not already empty.
 
 		void pop();					// Removes the element on top of the stack, reducing the 
@@ -25,7 +26,7 @@ class Stack {
 
 	private:
 		int t;
-		int S[CAPACITY];
+		T S[CAPACITY];
 
 };
 
