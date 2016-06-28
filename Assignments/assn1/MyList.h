@@ -1,8 +1,21 @@
-/*
- * MyList.h
- * cs014 Summer 2016
- * assn 1
- */
+ /**
+ * Course: CS 14 Summer 2016
+ *
+ * First Name: Courtney 
+ * Last Name: Kelly
+ * Username: ckell015
+ * email address: ckell015@ucr.edu
+ *
+ *
+ * Assignment: lab2
+ * Filename : MyList.h
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */ 
 
 #include "Node.h"
 #include <iostream>
