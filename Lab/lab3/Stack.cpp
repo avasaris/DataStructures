@@ -1,5 +1,6 @@
 #include "Stack.h"
 #include <iostream>
+#include <stdexcept>
 
 #define CAPACITY 25
 
