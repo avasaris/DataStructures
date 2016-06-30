@@ -1,7 +1,25 @@
+/**
+ * Course: CS 14 Summer 2016
+ *
+ * First Name: Courtney 
+ * Last Name: Kelly
+ * Username: ckell015
+ * email address: ckell015@ucr.edu
+ *
+ *
+ * Assignment: lab3
+ * Filename : main.cpp
+ *
+ * I hereby certify that the contents of this file represent
+ * my own original individual work. Nowhere herein is there 
+ * code from any outside resources such as another individual,
+ * a website, or publishings unless specifically designated as
+ * permissible by the instructor or TA.
+ */ 
+
 #include <iostream>
 #include <fstream>
 #include <cctype>
-#include <vector>
 #include <string>
 #include "Stack.h"
 
@@ -21,36 +39,57 @@ int main( int argc, char * argv[] ) {
 			char c;
 			while (InFile.get(c)) {
 				if (isdigit(c)) {
-					Numbers.push(c-48);		// convert from ASCII to actual number !!
-					Numbers.print();
+					try {
+						Numbers.push(c-48);		// convert from ASCII to actual number !!
+						Numbers.print();
+					}
+					catch (overflow_error& e) {
+						cerr << "Overflow Exception: " << e.what() << endl;
+					}
+					catch (underflow_error& e) {
+						cerr << "Underflow Exception: " << e.what() << endl;
+					}
 				}
 				else if (isblank(c)) {}
 				else {
 					cout << "Operator: " << c << endl;
-					// pop two numbers off the stack                 
-                        int a = Numbers.top();                 
-                        Numbers.pop();                 
-                        int b = Numbers.top();                 
-                        Numbers.pop();                 
-                    // evaluate and push the result back
-                        switch (c) {
-                        	case '+': 
-                        		Numbers.push(a + b); 
-                        		break;                     
-                            case '-': 
-                            	Numbers.push(b - a); 
-                            	break;                     
-                            case '*': 
-                            	Numbers.push(b * a); 
-                            	break;                     
-                            case '/': 
-                            	Numbers.push(b / a); 
-                            	break;
-                        }
-                    Numbers.print();
+					try {
+						// pop two numbers off the stack                 
+	                        int a = Numbers.top();                 
+	                        Numbers.pop();                 
+	                        int b = Numbers.top();                 
+	                        Numbers.pop();               
+	                    // evaluate and push the result back
+	                        switch (c) {
+	                        	case '+': 
+	                        		Numbers.push(a + b); 
+	                        		break;                     
+	                            case '-': 
+	                            	Numbers.push(b - a); 
+	                            	break;                     
+	                            case '*': 
+	                            	Numbers.push(b * a); 
+	                            	break;                     
+	                            case '/': 
+	                            	Numbers.push(b / a); 
+	                            	break;
+	                        }
+	                    Numbers.print();
+	                    }
+	                catch (overflow_error& e) {
+						cerr << "Overflow Exception: " << e.what() << endl;
+					}
+					catch (underflow_error& e) {
+						cerr << "Underflow Exception: " << e.what() << endl;
+					}
 				}
 			}
+			try {
 			cout << "Result: " << Numbers.top() << endl << endl;
+			}
+			catch (underflow_error& e) {
+						cerr << "Underflow Exception: " << e.what() << endl;
+			}
 		}
 		InFile.close();
 	}
@@ -58,40 +97,29 @@ int main( int argc, char * argv[] ) {
 	// Double Stack
 	cout << "\nStack of Type <double>" << endl;
 	Stack<double> doubleStack;
-	doubleStack.push(5.2);
-	doubleStack.push(100.33);
-	doubleStack.push(.02);
-	doubleStack.print();
-	cout << "Top: " << doubleStack.top() << endl;
-	doubleStack.pop();
-	doubleStack.print();
-	cout << "Top: " << doubleStack.top() << endl;
+	cout << "Pushing onto stack..." << endl;
+	try {
+		doubleStack.push(5.2);
+		doubleStack.print();
+		doubleStack.push(100.33);
+		doubleStack.print();
+		doubleStack.push(.02);
+		doubleStack.print();
+		doubleStack.push(4.7);
+		doubleStack.print();
+		doubleStack.push(2.3);
+		doubleStack.print();
+		doubleStack.push(.05);
+		doubleStack.print();
+	}
+	catch (overflow_error& e) {
+		cerr << "Overflow Exception: " << e.what() << endl;
+	}
+	catch (underflow_error& e) {
+		cerr << "Underflow Exception: " << e.what() << endl;
+	}
 
-	// Char Stack
-	cout << "\nStack of Type <char>" << endl;
-	Stack<char> charStack;
-	charStack.push('a');
-	charStack.push('b');
-	charStack.push('z');
-	charStack.print();
-	cout << "Top: " << charStack.top() << endl;
-	charStack.pop();
-	charStack.print();
-	cout << "Top: " << charStack.top() << endl;
-
-	// Short Stack 
-	cout << "\nStack of Type <short>" << endl;
-	Stack<short> shortStack;
-	shortStack.push(5);
-	shortStack.push(100);
-	shortStack.push(2);
-	shortStack.print();
-	cout << "Top: " << shortStack.top() << endl;
-	shortStack.pop();
-	shortStack.print();
-	cout << "Top: " << shortStack.top() << endl;
-
-	/* String Stack 
+	// String Stack 
 	cout << "\nStack of Type <string>" << endl;
 	Stack<string> stringStack;
 	stringStack.push("hey");
@@ -99,9 +127,22 @@ int main( int argc, char * argv[] ) {
 	stringStack.push("hello");
 	stringStack.print();
 	cout << "Top: " << stringStack.top() << endl;
-	stringStack.pop();
-	stringStack.print();
-	cout << "Top: " << stringStack.top() << endl;
-	*/
+	cout << "Popping off stack..." << endl;
+	try {
+		stringStack.pop();
+		stringStack.print();
+		stringStack.pop();
+		stringStack.print();
+		stringStack.pop();
+		stringStack.print();
+		stringStack.pop();
+	}
+	catch (underflow_error& e) {
+		cerr << "Underflow Exception: " << e.what() << endl;
+	}
+	catch (overflow_error& e) {
+		cerr << "Overflow Exception: " << e.what() << endl;
+	}
+	
 	return 0;
 }
