@@ -8,19 +8,19 @@ using namespace std;
 
 
 // Constructor
-template <typename T> 
+template <class T> 
 Stack<T>::Stack() {
 	t = -1;
 }
 
 // Destructor
-template <typename T>
+template <class T>
 Stack<T>::~Stack() {
 
 }
 
-template <typename T>
-void Stack<T>::push(const T& x) {
+template <class T>
+void Stack<T>::push( T x) {
 
 	if (size() == CAPACITY) {
  		throw overflow_error("Stack overflow");
@@ -30,7 +30,7 @@ void Stack<T>::push(const T& x) {
 	}
 }
 
-template <typename T>
+template <class T>
 T& Stack<T>::top() {
 
 	if (is_empty()) {
@@ -42,7 +42,7 @@ T& Stack<T>::top() {
 
 }
 
-template <typename T>
+template <class T>
 void Stack<T>::pop() {
 
 	if (is_empty()) {
@@ -55,21 +55,21 @@ void Stack<T>::pop() {
 
 }
 
-template <typename T>
+template <class T>
 bool Stack<T>::is_empty() const {
 
 	return (t<0);
 
 }
 
-template <typename T>
+template <class T>
 int Stack<T>::size() {
 
 	return t+1;
 
 }
 
-template <typename T>
+template <class T>
 void Stack<T>::print() {
 
 	if ( size() == 0 ) {

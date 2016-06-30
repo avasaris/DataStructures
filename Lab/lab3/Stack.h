@@ -3,12 +3,12 @@
 
 #define CAPACITY 25
 
-template <typename T>
+template <class T>
 class Stack {
 	public:
 		Stack();
 		~Stack();
-		void push(const T& x); 	// adds a new element x at the top of the stack.
+		void push( T ); 	// adds a new element x at the top of the stack.
 
 		T& top(); 				// Returns a reference to the next(top) element in the stack,
 									// if the stack is not already empty.
