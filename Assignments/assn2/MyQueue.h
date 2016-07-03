@@ -21,8 +21,8 @@
 #define __MyQueue_H_
 
 #include <iostream>
-#include <stdexcept>
 #include "Node.h"
+#include "MyStack.h"
 #define MAX_QUEUE_SIZE 5
 
 using namespace std;
@@ -31,12 +31,13 @@ class MyQueue {
 	public:
 		MyQueue();
 		~MyQueue();
-		void push( string ); 	
-		string& front(); 				
+		void push( MyStack& ); 	
+		MyStack& top(); 				
 		void pop();		
 		bool is_empty() const; 
-		int size();
+		int size() const;
 		void print();
+		void debugger( string ) const ;
 
 	private:
 		Node* front;

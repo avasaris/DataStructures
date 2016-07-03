@@ -8,39 +8,34 @@
  *
  *
  * Assignment: assn2
- * Filename : MyStack.h
+ * Filename : main.cpp
  *
  * I hereby certify that the contents of this file represent
  * my own original individual work. Nowhere herein is there 
  * code from any outside resources such as another individual,
  * a website, or publishings unless specifically designated as
  * permissible by the instructor or TA.
- */ 
- 
-#ifndef __MyStack_H_
-#define __MyStack_H_
+ */
 
 #include <iostream>
-#include <stdexcept>
-#define CAPACITY 25
+#include <string>
+#include "MyStack.h"
+#include "MyQueue.h"
+#include "WordLadder.h"
 
 using namespace std;
 
-class MyStack {
-	public:
-		MyStack();
-		~MyStack();
-		void push( string ); 	
-		string& top(); 				
-		void pop();		
-		bool is_empty() const; 
-		int size();
-		void print();
+int main( int argc, char * argv[] ) {
 
-	private:
-		int t;
-		string S[CAPACITY];
+	
+	if ( argc != 4 ) {
+		cout << "usage: ./a.out <dictionary.dict> <start word> <end word>" << endl;
+	}
+	else {
 
-};
+		WordLadder WordLadder1(argv[1]);
+		WordLadder1.outputLadder( argv[2], argv[3] );
+	} 
 
-#endif
+	return 0;
+}

@@ -8,39 +8,34 @@
  *
  *
  * Assignment: assn2
- * Filename : MyStack.h
+ * Filename : WordLadder.h
  *
  * I hereby certify that the contents of this file represent
  * my own original individual work. Nowhere herein is there 
  * code from any outside resources such as another individual,
  * a website, or publishings unless specifically designated as
  * permissible by the instructor or TA.
- */ 
- 
-#ifndef __MyStack_H_
-#define __MyStack_H_
+ */
 
-#include <iostream>
-#include <stdexcept>
-#define CAPACITY 25
+ #ifndef _WORDLADDER_H
+ #define _WORDLADDER_H
 
-using namespace std;
+ #include <iostream>
+ #include <string>
+ #include <list>
+ //#include "MyQueue"
+ //#include "MyStack"
 
-class MyStack {
+ using namespace std;
+
+ class WordLadder {
 	public:
-		MyStack();
-		~MyStack();
-		void push( string ); 	
-		string& top(); 				
-		void pop();		
-		bool is_empty() const; 
-		int size();
-		void print();
-
+	 	WordLadder( const string &listFile );	// Constructor
+	 	~WordLadder();
+		void outputLadder( const string &start, const string &end );	// output function
+		void debugger(string);
 	private:
-		int t;
-		string S[CAPACITY];
+		list<string> dictionary;
+ };
 
-};
-
-#endif
+ #endif

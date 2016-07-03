@@ -20,7 +20,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "MyStack.h"
-#define CAPACITY 5
+#define CAPACITY 25
 
 using namespace std;
 
