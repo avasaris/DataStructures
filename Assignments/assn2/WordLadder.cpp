@@ -80,6 +80,8 @@
 					else {
 						stack_queue.top().push(*it);
 						stack_queue.top().print();
+						dictionary.remove(*it);
+						break;
 						/*
 						debugger("copying stack...");
 						stack_queue.top().print();
