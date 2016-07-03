@@ -25,7 +25,7 @@
  #include "MyStack.h"
  #include "WordLadder.h"
 
- #define debug true
+ #define debug false
 
  using namespace std;
 

@@ -23,7 +23,7 @@
 #include "MyQueue.h"
 #include "MyStack.h"
 #define MAX_QUEUE_SIZE 5
-#define debug true
+#define debug false
 
 using namespace std;
 
