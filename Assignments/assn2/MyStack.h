@@ -22,7 +22,7 @@
 
 #include <iostream>
 #include <stdexcept>
-#define CAPACITY 25
+#define CAPACITY 2500
 
 using namespace std;
 
