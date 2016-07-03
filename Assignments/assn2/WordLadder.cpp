@@ -79,6 +79,7 @@
 					}
 					else {
 						stack_queue.top().push(*it);
+						cout << stack_queue.top().print();
 						/*
 						debugger("copying stack...");
 						stack_queue.top().print();
