@@ -104,7 +104,7 @@ void MyStack::print() {
   	else {
 	  	cout << "Stack: ";
 	  	for (int i=0; i<size(); i++) {
-	  		cout << S[i] << " ";
+	  		cout << S[i] << endl;
 	  	}
 	  	cout << endl;
 	}

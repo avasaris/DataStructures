@@ -60,7 +60,7 @@
 
 		while (stack_queue.size() != 0) {
 			for (list<string>::iterator it=dictionary.begin(); it != dictionary.end(); ++it) {
-				cout << "Word: " << *it << endl;
+				//cout << "Word: " << *it << endl;
 				for (int i=0; i<5; i++) {
 					string dictionary_word = *it;
 					if ( dictionary_word[i] != stack_queue.top().top()[i]) {
