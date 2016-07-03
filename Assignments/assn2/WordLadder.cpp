@@ -78,6 +78,8 @@
 						stack_queue.pop();
 					}
 					else {
+						stack_queue.top().push(*it);
+						/*
 						debugger("copying stack...");
 						stack_queue.top().print();
 						debugger("declaring new string stack...");
@@ -95,6 +97,7 @@
 						cout << "Size of Queue: " << stack_queue.size() << endl;
 						stack_queue.pop();
 						cout << "Size of Queue: " << stack_queue.size() << endl;
+						*/
 					} 
 				}
 				numDifferences=0;

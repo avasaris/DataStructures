@@ -133,7 +133,9 @@ void MyQueue::pop() {
 			for (temp=front; temp != NULL; temp=temp->next) {
 				i++;
 				if (i == (position-1)) {
+					debugger("rear = temp");
 					rear = temp;
+					debugger("temp->next = NULL");
 					temp->next = NULL;
 				}
 			}
