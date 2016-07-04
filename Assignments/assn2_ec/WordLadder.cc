@@ -113,7 +113,8 @@ bool WordLadder::in_dumpList( string& dictionary_word ) {
 
 void WordLadder::print( stack<string> S ) {
 
-	for (int j=0; j<S.size(); j++) {
+	int size = S.size();
+	for (int j=0; j<size; j++) {
 		cout << S.top() << endl;
 		S.pop();
 	}
