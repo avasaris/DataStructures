@@ -52,61 +52,63 @@
 
 		MyStack string_stack;
 		string_stack.push(start);
-		MyQueue stack_queue;
+		MyQueue stack_queue, solutions;
 		stack_queue.push(string_stack);
+		dumpList.push_back(start);
 
-		int numDifferences=0;
-		dictionary.remove(start);
-
-		while (stack_queue.size() != 0) {
-			for (list<string>::iterator it=dictionary.begin(); it != dictionary.end(); ++it) {
-				//cout << "Word: " << *it << endl;
-				for (int i=0; i<5; i++) {
-					string dictionary_word = *it;
-					if ( dictionary_word[i] != stack_queue.top().top()[i]) {
-						debugger("found a different character...");
-						numDifferences++;
-					}
-				}
-				debugger("if numDifferences == 1...");
-				if (numDifferences == 1) {
-					debugger("if it's the last word...");
+		while ( !stack_queue.is_empty() ) {
+			for (list<string>::iterator it=dictionary.begin(); it != dictionary.end(); it++) {
+				if ( neighbors(*it, stack_queue.front().top()) && !in_dumpList(*it) ) {
 					if (*it == end) {
-						debugger("it's the last word...");
-						stack_queue.top().push(*it);
-						stack_queue.top().print();
+						stack_queue.front().push(*it);
+						solutions.push(stack_queue.front());
 						stack_queue.pop();
+						break;
 					}
 					else {
-						stack_queue.top().push(*it);
-						stack_queue.top().print();
-						dictionary.remove(*it);
-						/*
-						debugger("copying stack...");
-						stack_queue.top().print();
-						debugger("declaring new string stack...");
 						MyStack new_string_stack;
-						debugger("setting the new string stack equal to the old...");
-						new_string_stack = stack_queue.top();
-						new_string_stack.print();
-						debugger("pushing the matched word...");
+						for ( int i=0; i<stack_queue.front().size(); i++ ) {
+							new_string_stack.push( stack_queue.front()[i] );
+						}
 						new_string_stack.push(*it);
-						new_string_stack.print();
-						debugger("removing the world from the dictionary...");
-						dictionary.remove(*it);
-						debugger("pushing the new stack...");
 						stack_queue.push(new_string_stack);
-						cout << "Size of Queue: " << stack_queue.size() << endl;
-						stack_queue.pop();
-						cout << "Size of Queue: " << stack_queue.size() << endl;
-						*/
+						dumpList.push_back(*it);
 					} 
 				}
-				numDifferences=0;
 			}
+			stack_queue.pop();
+		}
+
+		if ( solutions.is_empty() ) {
+			cout << "Sorry, couldn't find word ladder" << endl;
+		}
+		else {
+			cout << "Solutions: " << endl;
+			solutions.print();
 		}
 
 	}
+
+bool WordLadder::neighbors( string& dictionary_word, string& top_word ) {
+
+	int numDifferences=0;
+	int length = dictionary_word.size();
+	for ( int i=0; i<(length); i++ ) {
+		if ( dictionary_word[i] != top_word[i] ) {
+			numDifferences++;
+		}
+	}
+
+	return (numDifferences==1);
+
+}
+
+bool WordLadder::in_dumpList( string& dictionary_word ) {
+
+	list<string>::iterator iter = find(dumpList.begin(), dumpList.end(), dictionary_word);
+	return ( iter != dumpList.end() );
+
+}
 
 void WordLadder::debugger( string message ) {
 

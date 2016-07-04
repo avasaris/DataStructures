@@ -19,8 +19,11 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <string>
 #include "MyStack.h"
+
 #define CAPACITY 2500
+#define debug false
 
 using namespace std;
 
@@ -88,7 +91,7 @@ bool MyStack::is_empty() const {
 
 /*	Returns how many elements are in the stack 
 */
-int MyStack::size() {
+int MyStack::size() const {
 
 	return t+1;
 
@@ -102,10 +105,29 @@ void MyStack::print() {
     	throw underflow_error("Stack is Empty");
   	}
   	else {
-	  	cout << "Stack: ";
+	  	cout << "Stack: \n";
 	  	for (int i=0; i<size(); i++) {
 	  		cout << S[i] << endl;
 	  	}
 	  	cout << endl;
 	}
+}
+
+string& MyStack::operator[](const int i) {
+
+	if ( (i<0) || (i>=size()) ) {
+		throw out_of_range("The Place you are trying to reach is out of range");
+	}
+	else {
+		return S[i];
+	}
+	
+}
+
+void MyStack::debugger( string message ) {
+
+	if (debug) {
+		cout << message << endl;
+	}
+
 }

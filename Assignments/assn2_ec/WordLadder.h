@@ -23,6 +23,7 @@
  #include <iostream>
  #include <string>
  #include <list>
+ #include <stack>
 
  using namespace std;
 
@@ -34,6 +35,7 @@
 		bool neighbors( string&, string&  );
 		bool in_dumpList( string& );
 		void debugger(string);
+		void print( stack<string> );
 	private:
 		list<string> dictionary;
 		list<string> dumpList;

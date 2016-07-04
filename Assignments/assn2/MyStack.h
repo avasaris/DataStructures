@@ -22,6 +22,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <string> 
 #define CAPACITY 2500
 
 using namespace std;
@@ -34,9 +35,10 @@ class MyStack {
 		string& top(); 				
 		void pop();		
 		bool is_empty() const; 
-		int size();
-		void print();
-
+		int size() const;
+		void print();		
+		string& operator[](const int i);
+		void debugger( string );
 	private:
 		int t;
 		string S[CAPACITY];

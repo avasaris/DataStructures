@@ -8,42 +8,32 @@
  *
  *
  * Assignment: assn2
- * Filename : MyQueue.h
+ * Filename : main.cpp
  *
  * I hereby certify that the contents of this file represent
  * my own original individual work. Nowhere herein is there 
  * code from any outside resources such as another individual,
  * a website, or publishings unless specifically designated as
  * permissible by the instructor or TA.
- */ 
- 
-#ifndef __MyQueue_H_
-#define __MyQueue_H_
+ */
 
 #include <iostream>
-#include "Node.h"
-#include "MyStack.h"
-#define MAX_QUEUE_SIZE 2500
+#include <string>
+#include "WordLadder.h"
 
 using namespace std;
 
-class MyQueue {
-	public:
-		MyQueue();
-		~MyQueue();
-		void push( MyStack& ); 	
-		MyStack& front(); 				
-		void pop();		
-		bool is_empty() const; 
-		int size() const;
-		void print();
-		void debugger( string ) const ;
+int main( int argc, char * argv[] ) {
 
-	private:
-		Node* head;
-		Node* rear;
-		int numItems;
+	
+	if ( argc != 4 ) {
+		cout << "usage: ./a.out <dictionary.dict> <start word> <end word>" << endl;
+	}
+	else {
 
-};
+		WordLadder WordLadder1(argv[1]);
+		WordLadder1.outputLadder( argv[2], argv[3] );
+	} 
 
-#endif
+	return 0;
+}
