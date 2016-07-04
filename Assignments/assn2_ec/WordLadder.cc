@@ -61,26 +61,14 @@
 			for (list<string>::iterator it=dictionary.begin(); it != dictionary.end(); it++) {
 				if ( neighbors(*it, stack_queue.front().top()) && !in_dumpList(*it) ) {
 					if (*it == end) {
-						stack_queue.front().push(*it);
-						solutions.push(stack_queue.front());
+						stack<string> new_string_stack( stack_queue.front() );
+						new_string_stack.push(*it);
+						solutions.push( new_string_stack );
+						dumpList.push_back(*it);
 					}
 					else {
-						stack<string> new_string_stack;
-						for (int i=0; i<(stack_queue.front().size()); i++) {
-							new_string_stack.push( stack_queue.front().top() );
-							stack_queue.front().pop();
-						}
-						/*
-						new_string_stack = stack_queue.front();
-						cout << "Stack to copy: " << endl;
-						print(stack_queue.front());
-						cout << "Stack after assignment: " << endl;
-						print(new_string_stack); */
-						cout << "Stack before push: " << endl;
-						print(new_string_stack);
+						stack<string> new_string_stack( stack_queue.front() );
 						new_string_stack.push(*it);
-						cout << "Stack after push: " << *it << endl;
-						print(new_string_stack);
 						stack_queue.push(new_string_stack);
 						dumpList.push_back(*it);
 					} 
@@ -89,18 +77,15 @@
 			stack_queue.pop();
 		}
 
-/*
+
 		cout << "Solutions: " << endl;
 		for (int i=0; i<solutions.size(); i++) {
 			stack<string> solution_stack = solutions.front();
 			solutions.pop();
 			cout << "\nStack: " << endl;
-			for (int j=0; j<solution_stack.size(); j++) {
-				cout << solution_stack.top() << endl;
-				solution_stack.pop();
-			}
+			print( solution_stack );
         }
-*/
+
 	}
 
 bool WordLadder::neighbors( string& dictionary_word, string& top_word ) {
