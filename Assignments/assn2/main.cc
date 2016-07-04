@@ -34,7 +34,13 @@ int main( int argc, char * argv[] ) {
 	else {
 
 		WordLadder WordLadder1(argv[1]);
-		WordLadder1.outputLadder( argv[2], argv[3] );
+
+		if ( ( strlen(argv[2])==5) && ( strlen(argv[3])==5) ) {
+			WordLadder1.outputLadder( argv[2], argv[3] );
+		}
+		else {
+			cout << "Both the start and end word need to be of length 5!" << endl;
+		}
 	} 
 
 	return 0;
