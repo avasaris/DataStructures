@@ -24,6 +24,7 @@
  #include <list>
  #include <stack>
  #include <queue>
+ #include <algorithm>
  #include "WordLadder.h"
 
  #define debug false
@@ -79,7 +80,8 @@
 
 
 		cout << "Solutions: " << endl;
-		for (int i=0; i<solutions.size(); i++) {
+		int size = solutions.size();
+		for (int i=0; i<size; i++) {
 			stack<string> solution_stack = solutions.front();
 			solutions.pop();
 			cout << "\nStack: " << endl;
