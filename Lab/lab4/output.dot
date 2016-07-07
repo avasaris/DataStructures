@@ -1,0 +1,17 @@
+// Digraph 
+// lab 4 
+// output.dot 
+// cs014_16sum1
+//height traversal
+
+digraph G {
+
+//nodes
+a [color = orange, peripheries=2, style = filled, label="key=4, in=0"];
+b [color = orange, peripheries=2, style = filled, label="key=2, in=0"];
+c [color = orange, peripheries=2, style = filled, label="key=5, in=0"];
+
+//edges
+a -> b [color=blue];
+a -> c [color=blue];
+}

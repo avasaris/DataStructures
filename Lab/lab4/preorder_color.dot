@@ -1,0 +1,24 @@
+/* Digraph 
+ * lab 4
+ * preorder_color.dot
+ * cs014_16sum1 
+ */
+
+digraph G {
+
+  // nodes
+  a [color = orange, peripheries=2, style = filled, label="key=4, pre=1"];
+  b [color = orange, peripheries=2, style = filled, label="key=2, pre=2"];
+  c [color = orange, peripheries=2, style = filled, label="key=6, pre=5"];
+  d [color = orange, peripheries=2, style = filled, label="key=1, pre=3"];
+  e [color = orange, peripheries=2, style = filled, label="key=3, pre=4"]; 
+  f [color = orange, peripheries=2, style = filled, label="key=5, pre=6"];
+  g [color = orange, peripheries=2, style = filled, label="key=7, pre=7"];
+
+  a -> b [color=blue];
+  a -> c [color=blue];
+  b -> d [color=blue]; 
+  b -> e [color=blue]; 
+  c -> f [color=blue]; 
+  c -> g [color=blue]; 
+}
