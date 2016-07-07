@@ -19,6 +19,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 #include "MyStack.h"
 #include "MyQueue.h"
 #include "WordLadder.h"
