@@ -14,6 +14,7 @@
 #include <queue>
 #include <cmath>
 #include <queue>
+#include <string>
 
 using namespace std;
 
@@ -70,7 +71,8 @@ private:
 
 public:
     BST(): root(NULL) {}
-    ~BST() {}
+    ~BST();
+    void freeNode(BinaryNode*);
     void insert(int v) { root = BinaryNode::insert(v, root); }
     void remove(int v) { root = BinaryNode::remove(v, root); }
     void display() { display(root); }
@@ -90,10 +92,10 @@ public:
     BinaryNode* getRoot() {return root;}
     int getLocation( queue<int>, int);
     int getTreeHeight(BinaryNode*);
-    int getNodeDepth( BinaryNode*, BinaryNode*, int );
-    void print(ofstream& ofs, queue<int>& );
+    int getNodeDepth( BinaryNode*, int, int );
+    void print(ofstream& ofs, queue<int>&, string, string );
     void printEdges(ofstream& ofs);
-    queue<int> height();
+    void height(ofstream& ofs);
     void preorder( BinaryNode* t, queue<int>& );
     void inorder( BinaryNode* t, queue<int>& );
     void postorder( BinaryNode* t, queue<int>& );
@@ -101,6 +103,25 @@ public:
 private:
     BinaryNode* root;
 };
+
+// Destructor
+BST::~BST() {
+    
+    cout << "Destructor called..." << endl;
+    freeNode( getRoot() );
+
+}
+
+void BST::freeNode( BinaryNode* node ) {
+
+    if (node != NULL) {
+        freeNode(node->left);
+        freeNode(node->right);
+        cout << "Deleting " << node->value << "..." << endl;
+        delete node;
+    }
+
+}
 
 void BST::preorder( BinaryNode* root, queue<int>& preorderQ ) {
 
@@ -129,18 +150,23 @@ void BST::postorder( BinaryNode* root, queue<int>& postorderQ ) {
     }
 }
 
-queue<int> BST::height() {
+void BST::height( ofstream& ofs ) {
 
-    queue<int> heightQ;
+    ofs << "// Digraph \n// lab 4 \n// output.dot \n// cs014_16sum1\n//" << "height traversal" << endl << endl;
+    ofs << "digraph G {\n\n//nodes" << endl;
+
     queue<BinaryNode*> q;
     q.push(getRoot());   // push root
+    BinaryNode* root = getRoot();
     int treeHeight = getTreeHeight(getRoot());
+    char c = 'a';
 
     while ( ! q.empty() ) {
 
         // Pop a node from front
         BinaryNode* v = q.front();
-        heightQ.push( treeHeight - getNodeDepth( getRoot(), q.front(), 1 ) );
+        ofs << c++ << " [color = orange, peripheries=2, style = filled, label=\"key=";
+        ofs << q.front()->value << ", h=" << treeHeight - getNodeDepth( root, q.front()->value, 0 ) << "\"];" << endl;
 
         // Push the left children
         if ( v->left != NULL ) {
@@ -156,16 +182,18 @@ queue<int> BST::height() {
         q.pop();
     }
 
-    return heightQ;
 }
 
-void BST::print( ofstream& ofs, queue<int>& queueToPrint ) {
+void BST::print( ofstream& ofs, queue<int>& queueToPrint, string symbol, string mode ) {
+
+    ofs << "// Digraph \n// lab 4 \n// output.dot \n// cs014_16sum1\n//" << mode << " traversal" << endl << endl;
+    ofs << "digraph G {\n\n//nodes" << endl;
 
     queue<int> levelOrderQueue = levelOrder();
     char c='a';
     while (!levelOrderQueue.empty()) {
         ofs << c++ << " [color = orange, peripheries=2, style = filled, label=\"key=";
-        ofs << levelOrderQueue.front() << ", in=" << getLocation(queueToPrint, levelOrderQueue.front()) << "\"];" << endl;
+        ofs << levelOrderQueue.front() << symbol << getLocation(queueToPrint, levelOrderQueue.front()) << "\"];" << endl;
         levelOrderQueue.pop();
     }
 
@@ -204,6 +232,9 @@ void BST::printEdges(ofstream& ofs) {
         q.pop();
     }
 
+    ofs << "}" << endl;
+
+
 }
 
 int BST::getLocation( queue<int> queue, int value) {
@@ -232,18 +263,23 @@ int BST::getTreeHeight( BinaryNode* root ) {
     return 1 + max(left,right);
 }
 
-int BST::getNodeDepth( BinaryNode* root, BinaryNode* node, int height ) {
+int BST::getNodeDepth( BinaryNode* root, int value, int height ) {
 
-    if (root==NULL) return 0;
-    if (node==NULL) return height;
+    if (root == NULL) {
+        return 0;
+    }
 
-    // check left subtree
-    int depth = getNodeDepth( root->left, node, height+1 );
-    if (depth != 0) return depth;
+    if (root->value == value) {
+        return height;
+    }
 
-    // check right subtree
-    return getNodeDepth( root->right, node, height+1 );
+    int depth = getNodeDepth(root->left, value, height+1);
+    if (depth != 0 ) {
+        return depth;
+    }
 
+    depth = getNodeDepth(root->right, value, height+1);
+    return depth;
 
 }
 
@@ -251,8 +287,8 @@ queue<int> BST::levelOrder() {
 
     queue<int> levelOrderQueue;
     queue<BinaryNode*> q;
-
     q.push(getRoot());   // push root
+
     while ( ! q.empty() ) {
        // Pop a node from front
        BinaryNode* v = q.front();

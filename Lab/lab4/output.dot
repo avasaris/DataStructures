@@ -2,16 +2,18 @@
 // lab 4 
 // output.dot 
 // cs014_16sum1
-//height traversal
+//postorder traversal
 
 digraph G {
 
 //nodes
-a [color = orange, peripheries=2, style = filled, label="key=4, in=0"];
-b [color = orange, peripheries=2, style = filled, label="key=2, in=0"];
-c [color = orange, peripheries=2, style = filled, label="key=5, in=0"];
+a [color = orange, peripheries=2, style = filled, label="key=5, post=4"];
+b [color = orange, peripheries=2, style = filled, label="key=3, post=2"];
+c [color = orange, peripheries=2, style = filled, label="key=6, post=3"];
+d [color = orange, peripheries=2, style = filled, label="key=1, post=1"];
 
 //edges
 a -> b [color=blue];
 a -> c [color=blue];
+b -> d [color=blue];
 }
