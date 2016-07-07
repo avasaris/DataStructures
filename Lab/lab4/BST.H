@@ -203,7 +203,6 @@ void BST::printEdges(ofstream& ofs) {
 
     queue<int> levelOrderQueue = levelOrder();
     queue<BinaryNode*> q;
-    char c;
 
     ofs << "\n//edges" << endl;
 

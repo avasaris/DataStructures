@@ -20,7 +20,8 @@ int main(int argc, char* argv[]) {
         cerr << "Usage error: expected <executable>" << endl;
         exit(1);
     }
-      
+    
+    string executable = argv[0];
     string cmd = "";
     int key = -1;
     BST t;
