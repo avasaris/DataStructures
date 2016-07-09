@@ -8,7 +8,7 @@
  *
  *
  * Assignment: assn3
- * Filename : main.cpp
+ * Filename : Node.cpp
  *
  * I hereby certify that the contents of this file represent
  * my own original individual work. Nowhere herein is there 
@@ -17,13 +17,16 @@
  * permissible by the instructor or TA.
  */
 
- #include <iostream>
- #include "Tree.h"
- #include "Node.h"
+#include <iostream>
+#include <string>
+#include "Node.h"
 
- using namespace std;
 
- int main() {
+Node::Node( string v ) {
 
- 	return 0;
- }
+	value = v;
+	left = NULL;
+	right = NULL;
+	count = 1;
+
+}

@@ -30,19 +30,26 @@ class Tree {
 		Tree();
 		~Tree();
 		void insert( string );
-		/*
 		bool search( string );
 		string largest();
 		string smallest();
-		int height();
-		void remove( string );
+		int height( string );
+		void remove( string ); 
 		void preOrder();
 		void inOrder();
-		void postOrder(); */
+		void postOrder();
+		void printTreeSideways(); 
 		Node* getRoot();
 	private:
 		void addNode( string, Node* );
 		void freeNode( Node* );
+		void preOrder( Node* );
+		void inOrder( Node* );
+		void postOrder( Node* );
+		void printTreeSideways( Node*, int ); 
+		Node* remove(string, Node* );
+		int height( string, Node*, int );
+		Node* find_min( Node* );
 		Node* root;
 };
 

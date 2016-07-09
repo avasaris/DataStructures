@@ -27,27 +27,10 @@ using namespace std;
 class Node {
 	public:
 		Node( string );
-		//void increaseCount();
 		Node* left;
 	  	Node* right;
 	  	string value;
 	  	int count;
 };
-
-Node::Node( string v ) {
-
-	value = v;
-	left = NULL;
-	right = NULL;
-	count = 0;
-
-}
-
-/*
-void Node::increaseCount() {
-
-	count++;
-
-} */
 
 #endif /* NODE_H_ */
