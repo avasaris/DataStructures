@@ -82,7 +82,7 @@ public:
         array[ 1 ] = array[ currentSize-- ];
         percolateDown( 1 );
     }
-    
+
     int getSize() {
         return currentSize;
     }

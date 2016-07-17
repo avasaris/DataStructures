@@ -113,7 +113,7 @@ void MaxBinaryHeap<T>::deleteMax( ) {
 // Private Functions
 template <class T>
 void MaxBinaryHeap<T>::percolateUp( int hole ) {
-	debugger("percolate up...");
+	
     // can only percolate up if the hole isn't the root
     if ( hole > 1 ) {
 
