@@ -34,8 +34,12 @@ class MaxBinaryHeap {
 	public:
 		MaxBinaryHeap( int capacity = 100 ) 
 		: currentSize(0), array(capacity) {}
-		MaxBinaryHeap( const vector<int> & items )
-    	:  currentSize( items.size() ), array( items.size() + 10 ), capacity( items.size() + 10 ) {
+		MaxBinaryHeap( const vector<T>& items ) 
+		:  currentSize( items.size( ) ), array( items.size( ) + 10 ), capacity( items.size() + 10) {
+
+    		//cout << "currentSize: " << currentSize << endl;
+    		//cout << "capacity: " << capacity << endl;
+
 	        for( unsigned int i = 0; i < items.size( ); i++ ) {
 	            array[ i + 1 ] = items[ i ];
 	        }
@@ -46,7 +50,7 @@ class MaxBinaryHeap {
 		void insert( const T & x );
 		void print() const;
 		void deleteMax();
-		T getSize();
+		int getSize();
 		void debugger(string);
 	private:
 		int capacity;
@@ -60,7 +64,7 @@ class MaxBinaryHeap {
 };
 
 template <class T>
-T MaxBinaryHeap<T>::getSize() {
+int MaxBinaryHeap<T>::getSize() {
 
 	return currentSize;
 
@@ -113,7 +117,7 @@ void MaxBinaryHeap<T>::deleteMax( ) {
 // Private Functions
 template <class T>
 void MaxBinaryHeap<T>::percolateUp( int hole ) {
-	
+
     // can only percolate up if the hole isn't the root
     if ( hole > 1 ) {
 

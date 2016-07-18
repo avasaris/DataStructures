@@ -25,10 +25,11 @@
 using namespace std;
 
 template <typename T>
-void heapsort1( vector<T>& );
+void heapsort1( vector<T> );
 template <typename T>
 void print( vector<T>& );
-void heapsort2( vector<int>& );
+
+void heapsort2( vector<int> );
 
 int main() {
     
@@ -142,14 +143,25 @@ int main() {
 
         cout << "\nMin Heap Sort:" << endl;
         heapsort2(vector2);
-        cout << "Final: ";
-        print(vector2);
+
+        vector<string> stringVector;
+        stringVector.push_back("chocolate");
+        stringVector.push_back("covered");
+        stringVector.push_back("raisins");
+        stringVector.push_back("paper");
+        stringVector.push_back("goldfish");
+        stringVector.push_back("sunglasses");
+
+        cout << "\nString Heap Sort:" << endl;
+        cout << "Before: ";
+        print(stringVector);
+        heapsort1(stringVector);
     
     return 0;
 }
 
 template <typename T>
-void heapsort1( vector<T>& unsortedVector ) {
+void heapsort1( vector<T> unsortedVector ) {
     
     // create heap from unsorted vector
     MaxBinaryHeap<T> h(unsortedVector);
@@ -164,7 +176,7 @@ void heapsort1( vector<T>& unsortedVector ) {
     }
 }
 
-void heapsort2( vector<int>& vector2 ) {
+void heapsort2( vector<int> vector2 ) {
 
     // create heap from unsorted vector
     BinaryHeap h(vector2);
