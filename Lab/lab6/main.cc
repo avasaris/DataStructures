@@ -127,9 +127,10 @@ int main() {
         unsortedVector.push_back(12);
         unsortedVector.push_back(14);
 
+        cout << "\nTesting Heapsort on Max Heap <int> & <string>, and on Min Heap <int>" << endl;
         cout << "\nBefore: ";
         print(unsortedVector);
-        cout << "\nMax Heap Sort:" << endl;
+        cout << "Max Heap Sort:" << endl;
         heapsort1(unsortedVector);
 
         vector<int> vector2;
@@ -141,7 +142,7 @@ int main() {
         vector2.push_back(12);
         vector2.push_back(14);
 
-        cout << "\nMin Heap Sort:" << endl;
+        cout << "Min Heap Sort:" << endl;
         heapsort2(vector2);
 
         vector<string> stringVector;
@@ -155,7 +156,9 @@ int main() {
         cout << "\nString Heap Sort:" << endl;
         cout << "Before: ";
         print(stringVector);
+        cout << "Max Heap Sort:" << endl;
         heapsort1(stringVector);
+        cout << endl;
     
     return 0;
 }
@@ -168,12 +171,11 @@ void heapsort1( vector<T> unsortedVector ) {
     int length = h.getSize();
 
     // remove from heap one by one and store in original array
-    for (int i=0; i<length; i++) {
-         unsortedVector[i] = h.findMax();
+    for (int i=length; i>0; i--) {
+         unsortedVector[i-1] = h.findMax();
          h.deleteMax();
-         cout << "Iteration " << i << ": ";
-         print(unsortedVector);
     }
+    print(unsortedVector);
 }
 
 void heapsort2( vector<int> vector2 ) {
@@ -183,12 +185,11 @@ void heapsort2( vector<int> vector2 ) {
     int length = h.getSize();
 
     // remove from heap one by one and store in original array
-    for (int i=0; i<length; i++) {
-         vector2[i] = h.findMin();
+    for (int i=length; i>0; i--) {
+         vector2[i-1] = h.findMin();
          h.deleteMin();
-         cout << "Iteration " << i << ": ";
-         print(vector2);
     }
+    print(vector2);
 
 }
 

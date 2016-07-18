@@ -45,7 +45,7 @@ public:
 
     }
 
-    const int & findMin( ) const {
+    const int& findMin( ) const {
 
         if (currentSize==0) {
             throw underflow_error("Heap is Empty");
@@ -90,7 +90,6 @@ public:
 private:
     int currentSize;   // Number of elements in heap
     vector<int> array; // The heap array
-    int capacity;       // capacity of the array
 
     void percolateUp( int hole ) {
 
@@ -111,7 +110,8 @@ private:
     
     void insert( int& newItem ) {
 
-        if ( currentSize >= array.size() ) {
+        int size = array.size();
+        if ( currentSize >= size ) {
             throw overflow_error("Heap Full Exception");
         }
 
@@ -152,6 +152,13 @@ private:
                 // This part is recursive and allows us to continue percolating
                 // down the element in question.
                 percolateDown(min);
+            }
+        }
+
+        // hole only has a left child
+        else if ( currentSize == 2*hole ) {
+            if (array[hole] > array[2*hole]) {
+                swap(array[hole], array[2*hole]);
             }
         }
     

@@ -35,7 +35,7 @@ class MaxBinaryHeap {
 		MaxBinaryHeap( int capacity = 100 ) 
 		: currentSize(0), array(capacity) {}
 		MaxBinaryHeap( const vector<T>& items ) 
-		:  currentSize( items.size( ) ), array( items.size( ) + 10 ), capacity( items.size() + 10) {
+		:  currentSize( items.size( ) ), array( items.size( ) + 10 ) {
 
     		//cout << "currentSize: " << currentSize << endl;
     		//cout << "capacity: " << capacity << endl;
@@ -53,7 +53,6 @@ class MaxBinaryHeap {
 		int getSize();
 		void debugger(string);
 	private:
-		int capacity;
 		int currentSize;
 		vector<T> array;
 		void percolateUp( int hole );
@@ -135,7 +134,8 @@ void MaxBinaryHeap<T>::percolateUp( int hole ) {
 template <class T> 
 void MaxBinaryHeap<T>::insert( T& newItem ) {
 
-    if ( currentSize >= array.size() ) {
+	int size = array.size();
+    if ( currentSize >= size ) {
         throw overflow_error("Heap Full Exception");
     }
 
@@ -180,6 +180,12 @@ void MaxBinaryHeap<T>::percolateDown( int hole ) {
 	        percolateDown(max);
 	    }
 	}
+	// hole only has a left child
+    else if ( currentSize == 2*hole ) {
+        if (array[2*hole] > array[hole]) {
+            swap(array[hole], array[2*hole]);
+        }
+    }
 
 }
 
