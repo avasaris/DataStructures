@@ -1,0 +1,39 @@
+// Digraph 
+// lab 7 
+// output.dot 
+// cs014_16sum1
+//
+
+digraph G {
+
+//nodes
+1 [color = orange, peripheries=2, style = filled, label="key=Friedland, distance=0"];
+1 -> 4
+1 -> 5
+1 -> 3
+2 [color = orange, peripheries=2, style = filled, label="key=Lodi, distance=2"];
+2 -> 4
+2 -> 7
+2 -> 6
+3 [color = orange, peripheries=2, style = filled, label="key=Marengo, distance=1"];
+3 -> 7
+4 [color = orange, peripheries=2, style = filled, label="key=Mondavi, distance=1"];
+4 -> 2
+4 -> 5
+4 -> 8
+4 -> 1
+5 [color = orange, peripheries=2, style = filled, label="key=Nile, distance=1"];
+5 -> 7
+5 -> 3
+6 [color = orange, peripheries=2, style = filled, label="key=Pyramids, distance=3"];
+6 -> 4
+6 -> 2
+6 -> 3
+7 [color = orange, peripheries=2, style = filled, label="key=Rivoli, distance=2"];
+7 -> 5
+8 [color = orange, peripheries=2, style = filled, label="key=Zurich, distance=2"];
+8 -> 5
+8 -> 6
+8 -> 2
+
+}

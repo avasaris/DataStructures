@@ -27,10 +27,8 @@ using namespace std;
 class BinaryHeap
 {
 public:
-    BinaryHeap( int capacity = 100 ) {
-        currentSize=0;
-        array[capacity];
-    }
+    BinaryHeap( int capacity = 100 )
+    : currentSize(0), array(capacity) {}
     BinaryHeap( const vector<int> & items )
     :  currentSize( items.size( ) ), array( items.size( ) + 10 ) {
         for( unsigned int i = 0; i < items.size( ); i++ ) {

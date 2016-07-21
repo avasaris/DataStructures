@@ -1,166 +1,180 @@
 /**
- * Course: CS 14 Summer 2016
- *
- * First Name: Courtney 
- * Last Name: Kelly
- * Username: ckell015
- * email address: ckell015@ucr.edu
- *
- *
- * Assignment: lab6
- * Filename : main.cc
- *
- * I hereby certify that the contents of this file represent
- * my own original individual work. Nowhere herein is there 
- * code from any outside resources such as another individual,
- * a website, or publishings unless specifically designated as
- * permissible by the instructor or TA.
- */ 
+ * cs014_10spr lab 7
+ * main.cc for BinaryHeap
+ */
 
-#include <iostream>
-#include <string>
-#include "BinaryHeap.h"
-#include "MaxBinaryHeap.h"
+#include "BinaryHeap.H"
+#include "MaxBinaryHeap.H"
 
-using namespace std;
-
+// Implement heapsort here
 template <typename T>
 void heapsort1( vector<T> );
 template <typename T>
 void print( vector<T>& );
 
-void heapsort2( vector<int> );
 
 int main() {
-    
-    vector<int> v;
-    v.push_back(10);
-    v.push_back(6);
-    v.push_back(8);
-    v.push_back(4);
-    v.push_back(2);
-    v.push_back(12);
-    v.push_back(14);
-    
-    // Testing MinHeap
-    cout << "\nTesting Min Heap:" << endl;
-        BinaryHeap pq(v);
-        pq.print( );
-        pq.insert(5);
-        pq.print();
-        pq.insert(6);
-        pq.print();
-        pq.insert(20);
-        pq.print();
-        pq.insert(16);
-        pq.print();
-        pq.insert(9);
-        pq.print();
 
-        // Testing findMin function 
-            cout << "Minimum: " << pq.findMin() << endl;
+	vector<int> v;
+	v.push_back(10);
+	v.push_back(6);
+	v.push_back(8);
+	v.push_back(4);
+	v.push_back(2);
+	v.push_back(12);
+	v.push_back(14);
 
-            BinaryHeap emptyHeap;
-            try {
-                cout << "Minimum: " << emptyHeap.findMin() << endl;
-            }
-            catch (underflow_error(e)) {
-                cout << "Caught Error: " << e.what() << endl;
-            }
+	BinaryHeap pq(v);
+	pq.print( );
 
-    // Testing MaxBinaryHeap<int>
-    cout << "\nTesting Max Heap <int> :" << endl;
+	// Add additional tests for new BinaryHeap functionality here
+	// Add additional tests for heapsort here. You should use the 
+	// print function to view the heap at each step of the sort.
 
-        MaxBinaryHeap<int> maxHeap(v);
-        maxHeap.print();
-        maxHeap.print( );
-        maxHeap.insert(5);
-        maxHeap.print();
-        maxHeap.insert(6);
-        maxHeap.print();
-        maxHeap.insert(20);
-        maxHeap.print();
-        maxHeap.insert(16);
-        maxHeap.print();
-        maxHeap.insert(9);
-        maxHeap.print();
 
-        // Testing findMax function 
-            cout << "Maximum: " << maxHeap.findMax() << endl;
+	cout << endl << "============== Min Heap Test ==============" << endl << endl;
 
-            MaxBinaryHeap<int> emptyMaxHeap;
-            try {
-                cout << "Maximum: " << emptyMaxHeap.findMax() << endl;
-            }
-            catch (underflow_error(e)) {
-                cout << "Caught Error: " << e.what() << endl;
-            }
+	BinaryHeap b(100);
 
-    // Testing MaxBinaryHeap<string>
-    cout << "\nTesting Max Heap <string>:" << endl;
+	b.insert(7);
+	b.insert(7);
+	b.insert(7);
+	b.insert(1);
+	b.insert(9);
+	b.insert(2);
+	b.insert(4);
+	b.insert(3);
+	b.insert(6);
+	b.insert(10);
+	b.insert(12);
+	b.insert(14);
+	b.insert(5);
+	b.insert(8);
+	b.insert(11);
+	b.insert(13);
+	b.insert(15);
 
-        MaxBinaryHeap<string> stringHeap;
-        stringHeap.insert("spicy");
-        stringHeap.print();
-        stringHeap.insert("alpha");
-        stringHeap.print();
-        stringHeap.insert("pasta");
-        stringHeap.print();
-        stringHeap.insert("goldfish");
-        stringHeap.print();
-        stringHeap.insert("water");
-        stringHeap.print();
-        stringHeap.insert("phone");
-        stringHeap.print();
-        stringHeap.insert("charger");
-        stringHeap.print();
-        stringHeap.insert("fork");
-        stringHeap.print();
-    
-    // Testing Heapsort
-        vector<int> unsortedVector;
-        unsortedVector.push_back(10);
-        unsortedVector.push_back(6);
-        unsortedVector.push_back(8);
-        unsortedVector.push_back(4);
-        unsortedVector.push_back(2);
-        unsortedVector.push_back(12);
-        unsortedVector.push_back(14);
+	b.print();
 
-        cout << "\nTesting Heapsort on Max Heap <int> & <string>, and on Min Heap <int>" << endl;
-        cout << "\nBefore: ";
-        print(unsortedVector);
-        cout << "Max Heap Sort:" << endl;
-        heapsort1(unsortedVector);
+	cout << "\t1st Min = " << b.findMin() << endl;
 
-        vector<int> vector2;
-        vector2.push_back(10);
-        vector2.push_back(6);
-        vector2.push_back(8);
-        vector2.push_back(4);
-        vector2.push_back(2);
-        vector2.push_back(12);
-        vector2.push_back(14);
 
-        cout << "Min Heap Sort:" << endl;
-        heapsort2(vector2);
+	b.deleteMin();
 
-        vector<string> stringVector;
-        stringVector.push_back("chocolate");
-        stringVector.push_back("covered");
-        stringVector.push_back("raisins");
-        stringVector.push_back("paper");
-        stringVector.push_back("goldfish");
-        stringVector.push_back("sunglasses");
+	cout << "\t2nd Min = " << b.findMin() << endl;
 
-        cout << "\nString Heap Sort:" << endl;
-        cout << "Before: ";
-        print(stringVector);
-        cout << "Max Heap Sort:" << endl;
-        heapsort1(stringVector);
-        cout << endl;
-    
-    return 0;
+
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+	b.deleteMin();
+
+	b.print();
+
+	cout << "\tLast Min = " << b.findMin() << endl;
+
+	b.insert(99);
+	b.insert(1);
+
+	b.print();
+
+
+	cout << endl << "============== Max Heap Test ==============" << endl << endl;
+
+	MaxBinaryHeap<int> b2;
+
+	b2.insert(7);
+	b2.insert(7);
+	b2.insert(7);
+	b2.insert(1);
+	b2.insert(9);
+	b2.insert(2);
+	b2.insert(4);
+	b2.insert(3);
+	b2.insert(6);
+	b2.insert(10);
+	b2.insert(12);
+	b2.insert(14);
+	b2.insert(5);
+	b2.insert(8);
+	b2.insert(11);
+	b2.insert(13);
+	b2.insert(15);
+
+	b2.print();
+
+	cout << "\t1st Max = " << b2.findMax() << endl;
+
+
+	b2.deleteMax();
+
+	cout << "\t2nd Max = " << b2.findMax() << endl;
+
+
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+	b2.deleteMax();
+
+	b2.print();
+
+	cout << "\tLast Max = " << b2.findMax() << endl;
+
+	b2.insert(99);
+	b2.insert(1);
+
+	b2.print();
+
+
+	cout << endl << "============== HeapSort Test ==============" << endl << endl;
+
+	
+	vector<int> s;
+
+	s.push_back(7);
+	s.push_back(7);
+	s.push_back(7);
+	s.push_back(1);
+	s.push_back(9);
+	s.push_back(2);
+	s.push_back(4);
+	s.push_back(3);
+	s.push_back(6);
+	s.push_back(10);
+	s.push_back(12);
+	s.push_back(14);
+	s.push_back(5);
+
+	s.push_back(8);
+	s.push_back(11);
+	s.push_back(13);
+	s.push_back(15);
+
+	heapsort1(s);
+
+  return 0;
 }
 
 template <typename T>
@@ -178,21 +192,6 @@ void heapsort1( vector<T> unsortedVector ) {
     print(unsortedVector);
 }
 
-void heapsort2( vector<int> vector2 ) {
-
-    // create heap from unsorted vector
-    BinaryHeap h(vector2);
-    int length = h.getSize();
-
-    // remove from heap one by one and store in original array
-    for (int i=length; i>0; i--) {
-         vector2[i-1] = h.findMin();
-         h.deleteMin();
-    }
-    print(vector2);
-
-}
-
 template <typename T>
 void print( vector<T>& v ) {
 
@@ -203,8 +202,3 @@ void print( vector<T>& v ) {
     cout << endl;
 
 }
-
-
-
-
-

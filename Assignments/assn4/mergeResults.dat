@@ -1,0 +1,94 @@
+---------------
+QUICKSORT TESTS
+---------------
+Vector<int>
+-----------
+
+---------------
+MERGESORT TESTS
+---------------
+Vector<int>
+-----------
+Mostly Ordered Vector<int>
+Before: 2 4 3 5 7 6 8 9 11 10 
+Input Size: 10
+Comparisions: 184
+Data Movements: 88
+Recursive Calls: 19
+After: 2 3 4 5 6 7 8 9 10 11 
+
+Mostly Random Vector<int>
+Before: 10 6 8 4 2 12 14 
+Input Size: 7
+Comparisions: 117
+Data Movements: 53
+Recursive Calls: 13
+After: 2 4 6 8 10 12 14 
+
+Random Vector<int>
+Before: 172 480 20 244 789 284 624 680 525 310 615 458 679 674 744 360 920 581 351 37 824 791 200 474 824 35 344 438 363 234 66 768 443 909 174 
+Input Size: 35
+Comparisions: 996
+Data Movements: 502
+Recursive Calls: 69
+After: 20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+
+Monotonically Increasing Vector<int>
+Before: 2 3 4 5 6 7 8 9 10 11 
+Input Size: 10
+Comparisions: 182
+Data Movements: 87
+Recursive Calls: 19
+After: 2 3 4 5 6 7 8 9 10 11 
+
+Monotonically Decreasing Vector<int>
+Before: 11 10 9 8 7 6 5 4 3 2 
+Input Size: 10
+Comparisions: 157
+Data Movements: 83
+Recursive Calls: 19
+After: 2 3 4 5 6 7 8 9 10 11 
+
+--------------
+Vector<string>
+--------------
+
+Mostly Ordered Vector<string>
+Before: bat fat cat hat gat mat pat tat sat rat 
+Input Size: 10
+Comparisions: 182
+Data Movements: 88
+Recursive Calls: 19
+After: bat cat fat gat hat mat pat rat sat tat 
+
+Mostly Random Vector<string>
+Before: pillow cushion couch tissues hat magazine remote backpack 
+Input Size: 8
+Comparisions: 145
+Data Movements: 65
+Recursive Calls: 15
+After: backpack couch cushion hat magazine pillow remote tissues 
+
+Random Vector<string>
+Before: ijemrsqafq ohxvfjgtkq qdbbifotiu asmjhvcdfc yqcowhmqzs ubvbolnyst xpvhpurknr cgdxrgkohd qmsltdnbpn szreihlebv xsblxmvdqn cat hat akdjag asruyailerfh dsjhfgds jpoiqlnkzy lzblzbpqqs kyjtuvpzbb qqpiearoez nirbzuduxv butkotkeaw amshnqlgsa htpyodwaxf frzttmohar hvzpwkpbkt mjsibxbtzl psnhuaztbn vntxhxhxir ybrdpwgneu tpvhxxxpbl achtrlurqf tmtvobwexk xtekjrrtej zbdgxuujfq 
+Input Size: 35
+Comparisions: 968
+Data Movements: 494
+Recursive Calls: 69
+After: achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+
+Monotonically Increasing Vector<string>
+Before: bat cat fat gat hat mat pat rat sat tat 
+Input Size: 10
+Comparisions: 182
+Data Movements: 87
+Recursive Calls: 19
+After: bat cat fat gat hat mat pat rat sat tat 
+
+Monotonically Decreasing Vector<string>
+Before: tat sat rat pat mat hat gat fat cat bat 
+Input Size: 10
+Comparisions: 157
+Data Movements: 83
+Recursive Calls: 19
+After: bat cat fat gat hat mat pat rat sat tat 

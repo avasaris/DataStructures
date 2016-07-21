@@ -1,0 +1,338 @@
+---------------
+QUICKSORT TESTS
+---------------
+Vector<int>
+-----------
+Mostly Ordered Vector<int>
+Before: 10 6 8 4 2 12 14 
+First Element Pivot:
+Input Size: 10
+Comparisions: 135
+Data Movements: 3
+Recursive Calls: 9
+2 3 4 5 6 7 8 9 10 11 
+Random Pivot:
+Input Size: 10
+Comparisions: 119
+Data Movements: 3
+Recursive Calls: 9
+2 3 4 5 6 7 8 9 10 11 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 119
+Data Movements: 12
+Recursive Calls: 9
+2 3 4 5 6 7 8 9 10 11 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 224
+Data Movements: 37
+Recursive Calls: 23
+2 3 4 5 6 7 8 9 10 11 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 134
+Data Movements: 20
+Recursive Calls: 13
+2 3 4 5 6 7 8 9 10 11 
+
+Mostly Random Vector<int>
+Before: 10 6 8 4 2 12 14 
+First Element Pivot:
+Input Size: 7
+Comparisions: 58
+Data Movements: 3
+Recursive Calls: 5
+2 4 6 8 10 12 14 
+Random Pivot
+Input Size: 7
+Comparisions: 58
+Data Movements: 3
+Recursive Calls: 5
+2 4 6 8 10 12 14 
+Median of Three Pivot
+Input Size: 7
+Comparisions: 47
+Data Movements: 6
+Recursive Calls: 4
+2 4 6 8 10 12 14 
+Quickselect Pivot
+Input Size: 7
+Comparisions: 58
+Data Movements: 15
+Recursive Calls: 7
+2 4 6 8 10 12 14 
+Deterministic Quickselect Pivot
+Input Size: 7
+Comparisions: 69
+Data Movements: 11
+Recursive Calls: 8
+2 4 6 8 10 12 14 
+
+Random Vector<int>
+Before: 172 480 20 244 789 284 624 680 525 310 615 458 679 674 744 360 920 581 351 37 824 791 200 474 824 35 344 438 363 234 66 768 443 909 174 
+First Element Pivot:
+Input Size: 35
+Comparisions: 630
+Data Movements: 43
+Recursive Calls: 34
+20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+Random Pivot
+Input Size: 35
+Comparisions: 561
+Data Movements: 44
+Recursive Calls: 33
+20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+Median of Three Pivot
+Input Size: 35
+Comparisions: 605
+Data Movements: 83
+Recursive Calls: 33
+20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+Quickselect Pivot
+Input Size: 35
+Comparisions: 986
+Data Movements: 190
+Recursive Calls: 72
+20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+Deterministic Quickselect Pivot
+Input Size: 35
+Comparisions: 734
+Data Movements: 264
+Recursive Calls: 41
+20 35 37 66 172 174 200 234 244 284 310 344 351 360 363 438 443 458 474 480 525 581 615 624 674 679 680 744 768 789 791 824 824 909 920 
+
+Monotonically Increasing Vector<int>
+Before: 2 3 4 5 6 7 8 9 10 11 
+First Element Pivot:
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+2 3 4 5 6 7 8 9 10 11 
+Random Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+2 3 4 5 6 7 8 9 10 11 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+2 3 4 5 6 7 8 9 10 11 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+2 3 4 5 6 7 8 9 10 11 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+2 3 4 5 6 7 8 9 10 11 
+
+Monotonically Decreasing Vector<int>
+Before: 11 10 9 8 7 6 5 4 3 2 
+First Element Pivot:
+Input Size: 10
+Comparisions: 141
+Data Movements: 5
+Recursive Calls: 9
+2 3 4 5 6 7 8 9 10 11 
+Random Pivot
+Input Size: 10
+Comparisions: 68
+Data Movements: 5
+Recursive Calls: 6
+2 3 4 5 6 7 8 9 10 11 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 106
+Data Movements: 12
+Recursive Calls: 9
+2 3 4 5 6 7 8 9 10 11 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 202
+Data Movements: 36
+Recursive Calls: 22
+2 3 4 5 6 7 8 9 10 11 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 134
+Data Movements: 20
+Recursive Calls: 13
+2 3 4 5 6 7 8 9 10 11 
+
+--------------
+Vector<string>
+--------------
+
+Mostly Ordered Vector<string>
+Before: bat fat cat hat gat mat pat tat sat rat 
+First Element Pivot:
+Input Size: 10
+Comparisions: 126
+Data Movements: 3
+Recursive Calls: 9
+bat cat fat gat hat mat pat rat sat tat 
+Random Pivot
+Input Size: 10
+Comparisions: 105
+Data Movements: 3
+Recursive Calls: 9
+bat cat fat gat hat mat pat rat sat tat 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 108
+Data Movements: 11
+Recursive Calls: 9
+bat cat fat gat hat mat pat rat sat tat 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 182
+Data Movements: 38
+Recursive Calls: 22
+bat cat fat gat hat mat pat rat sat tat 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 134
+Data Movements: 20
+Recursive Calls: 13
+bat cat fat gat hat mat pat rat sat tat 
+
+Mostly Random Vector<string>
+Before: pillow cushion couch tissues hat magazine remote backpack 
+First Element Pivot:
+Input Size: 8
+Comparisions: 88
+Data Movements: 5
+Recursive Calls: 7
+backpack couch cushion hat magazine pillow remote tissues 
+Random Pivot
+Input Size: 8
+Comparisions: 85
+Data Movements: 5
+Recursive Calls: 7
+backpack couch cushion hat magazine pillow remote tissues 
+Median of Three Pivot
+Input Size: 8
+Comparisions: 89
+Data Movements: 11
+Recursive Calls: 7
+backpack couch cushion hat magazine pillow remote tissues 
+Quickselect Pivot
+Input Size: 8
+Comparisions: 87
+Data Movements: 23
+Recursive Calls: 8
+backpack couch cushion hat magazine pillow remote tissues 
+Deterministic Quickselect Pivot
+Input Size: 8
+Comparisions: 94
+Data Movements: 15
+Recursive Calls: 11
+backpack couch cushion hat magazine pillow remote tissues 
+
+Random Vector<string>
+Before: ijemrsqafq ohxvfjgtkq qdbbifotiu asmjhvcdfc yqcowhmqzs ubvbolnyst xpvhpurknr cgdxrgkohd qmsltdnbpn szreihlebv xsblxmvdqn cat hat akdjag asruyailerfh dsjhfgds jpoiqlnkzy lzblzbpqqs kyjtuvpzbb qqpiearoez nirbzuduxv butkotkeaw amshnqlgsa htpyodwaxf frzttmohar hvzpwkpbkt mjsibxbtzl psnhuaztbn vntxhxhxir ybrdpwgneu tpvhxxxpbl achtrlurqf tmtvobwexk xtekjrrtej zbdgxuujfq 
+First Element Pivot:
+Input Size: 35
+Comparisions: 603
+Data Movements: 48
+Recursive Calls: 34
+achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+Random Pivot
+Input Size: 35
+Comparisions: 553
+Data Movements: 38
+Recursive Calls: 34
+achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+Median of Three Pivot
+Input Size: 35
+Comparisions: 555
+Data Movements: 75
+Recursive Calls: 34
+achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+Quickselect Pivot
+Input Size: 35
+Comparisions: 1081
+Data Movements: 244
+Recursive Calls: 85
+achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+Deterministic Quickselect Pivot
+Input Size: 35
+Comparisions: 734
+Data Movements: 264
+Recursive Calls: 41
+achtrlurqf akdjag amshnqlgsa asmjhvcdfc asruyailerfh butkotkeaw cat cgdxrgkohd dsjhfgds frzttmohar hat htpyodwaxf hvzpwkpbkt ijemrsqafq jpoiqlnkzy kyjtuvpzbb lzblzbpqqs mjsibxbtzl nirbzuduxv ohxvfjgtkq psnhuaztbn qdbbifotiu qmsltdnbpn qqpiearoez szreihlebv tmtvobwexk tpvhxxxpbl ubvbolnyst vntxhxhxir xpvhpurknr xsblxmvdqn xtekjrrtej ybrdpwgneu yqcowhmqzs zbdgxuujfq 
+
+Monotonically Increasing Vector<string>
+Before: bat cat fat gat hat mat pat rat sat tat 
+First Element Pivot:
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+bat cat fat gat hat mat pat rat sat tat 
+Random Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+bat cat fat gat hat mat pat rat sat tat 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+bat cat fat gat hat mat pat rat sat tat 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+bat cat fat gat hat mat pat rat sat tat 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 1
+Data Movements: 0
+Recursive Calls: 1
+bat cat fat gat hat mat pat rat sat tat 
+
+Monotonically Decreasing Vector<string>
+Before: tat sat rat pat mat hat gat fat cat bat 
+First Element Pivot:
+Input Size: 10
+Comparisions: 141
+Data Movements: 5
+Recursive Calls: 9
+bat cat fat gat hat mat pat rat sat tat 
+Random Pivot
+Input Size: 10
+Comparisions: 49
+Data Movements: 5
+Recursive Calls: 5
+bat cat fat gat hat mat pat rat sat tat 
+Median of Three Pivot
+Input Size: 10
+Comparisions: 87
+Data Movements: 11
+Recursive Calls: 7
+bat cat fat gat hat mat pat rat sat tat 
+Quickselect Pivot
+Input Size: 10
+Comparisions: 249
+Data Movements: 45
+Recursive Calls: 27
+bat cat fat gat hat mat pat rat sat tat 
+Deterministic Quickselect Pivot
+Input Size: 10
+Comparisions: 134
+Data Movements: 20
+Recursive Calls: 13
+bat cat fat gat hat mat pat rat sat tat 

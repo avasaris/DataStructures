@@ -121,11 +121,11 @@
  	cout << "Hash Table Stats:" << endl;
  	cout << "  Number of Collisions: " << collisions << endl;
 
- 	int max=0, location=0, sum=0;
+ 	double max=0, location=0, sum=0;
 
  	for (map< int, vector<string> >::iterator it=table.begin(); it != table.end(); it++) {
  		sum += it->second.size();
- 		int size = it->second.size();
+ 		double size = it->second.size();
  		if (size > max ) {
  			max = it->second.size();
  			location = it->first;
