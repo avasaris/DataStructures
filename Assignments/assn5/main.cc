@@ -18,15 +18,29 @@
 */
 
 #include <iostream>
-#include "Jug.h"
+#include <fstream>
+#include "jug.h"
 
 using namespace std;
 
 int main() {
 
-	Jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
+	ofstream ofs("output.dot");
+    if(!ofs) {
+        cout << "output.dot could not be opened." << endl;
+        exit(1);
+    }
 
-	int solution = die_hard.solve();
+	jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
+
+	int solution = die_hard.solve( ofs );
+
+	if (solution == -1) {
+		cout << "invalid entries" << endl;
+	}
+	else if (solution == 0) {
+		cout << "couldn't find solution" << endl;
+	}
 
 	return 0;
 }

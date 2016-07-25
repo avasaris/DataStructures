@@ -20,6 +20,7 @@
 */
 
 #include <iostream>
+#include <fstream>
 #include <cassert>
 #include <cstdio>
 #include <utility>
@@ -27,16 +28,16 @@
 #include <stack>
 #include <map>
 #include <algorithm>
-#include "Jug.h"
+#include "jug.h"
 #include "State.h"
 
 using namespace std;
 
-Jug::Jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA) {
+jug::jug(int Ca, int Cb, int n, int fA, int fB, int eA, int eB, int pAB, int pBA) {
 
 	capacityA = Ca;
 	capacityB = Cb;
-	N = N;
+	N = n;
 	fillA = fA;
 	fillB = fB;
 	emptyA = eA;
@@ -46,7 +47,7 @@ Jug::Jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA
 
 }
 
-int Jug::solve() {
+int jug::solve( ofstream& ofs ) {
 
 	// Check if input valid 
 	try {
@@ -59,6 +60,10 @@ int Jug::solve() {
 		return -1;
 	}
 
+	// print nodes
+	int prev = 0;
+	printNodes(ofs);
+
 	// path to solution
 	stack <pair <State, int> > path;
 
@@ -70,40 +75,68 @@ int Jug::solve() {
 		return 0;
 	}
 	else {
+		int length = path.size()-1;
 		while (!path.empty()) {
 			State current = path.top().first;
 			int rule = path.top().second;
 			path.pop();
 
 			switch (rule)   {
-                case 0: printf("State : (%d, %d)\n\n", current.jugA, current.jugB);
-                        break;
-                case 1: printf("State : (%d, %d) Action : Fill A\n", current.jugA, current.jugB);
-                        break;
-                case 2: printf("State : (%d, %d) Action : Fill B\n", current.jugA, current.jugB);
-                        break;
-                case 3: printf("State : (%d, %d) Action : Empty A\n", current.jugA, current.jugB);
-                        break;
-                case 4: printf("State : (%d, %d) Action : Empty B\n", current.jugA, current.jugB);
-                        break;
-                case 5: printf("State : (%d, %d) Action : Pour B A\n", current.jugA, current.jugB);
-                        break;
-                case 6: printf("State : (%d, %d) Action : Pour A B\n", current.jugA, current.jugB);
-                        break;
+                case 0: 
+                    break;
+                case 1: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Fill A" << endl;
+                	// print edge
+		    		ofs << prev << " -> 1" << endl;
+		    		prev = 1;
+                    break;
+                case 2: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Fill B" << endl;
+                	// print edge
+		    		ofs << prev << " -> 2" << endl;
+		    		prev = 2;
+                    break;
+                case 3: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Empty A" << endl;
+                	// print edge
+		    		ofs << prev << " -> 3" << endl;
+		    		prev = 3;
+                    break;
+                case 4: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Empty B" << endl;
+                	// print edge
+		    		ofs << prev << " -> 4" << endl;
+		    		prev = 4;
+                    break;
+                case 5: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Pour B A" << endl;
+                	// print edge
+		    		ofs << prev << " -> 5" << endl;
+		    		prev = 5;
+                    break;
+                case 6: 
+                	cout << "State: (" << current.jugA << ", " << current.jugB << ") Action: Fill B A" << endl;
+                	// print edge
+		    		ofs << prev << " -> 6" << endl;
+		    		prev = 6;
+                    break;
+                default:
+                	cout << "default" << endl;
+                	break;
             }
 		}
-		cout << "Success " << path.size()-1 << endl;
+		cout << "Success " << length << endl;
+		ofs << "}" << endl;
 		return 1;
 	}
 
 }
 
-void Jug::bfs( State initial, stack <pair <State, int> >& path ) {
+void jug::bfs( State& initial, stack <pair <State, int> >& path ) {
 
 	// Create an empty Queue
 	queue< State > Q;
 	State goal(-1, -1);
-
 
 	// stores the previous states so they aren't revisited
 	map < State, pair <State, int> > previous;
@@ -184,12 +217,29 @@ void Jug::bfs( State initial, stack <pair <State, int> >& path ) {
 		return;
 	}
 
+
+	cout << "length of previous: " << previous.size() << endl;
 	// push back on the stack to get sequence of rules
 	path.push(make_pair(goal, 0));
 	// initial state (start) is paired with 0
-	while (previous[(path.top()).first].second != 0) {
-        path.push(previous[(path.top()).first]);
+	while (previous[path.top().first].second != 0) {
+        path.push(previous[path.top().first]);
     }
+
+}
+
+void jug::printNodes( ofstream& ofs ) {
+
+	ofs << "// Digraph \n// assn5 \n// output.dot \n// cs014_16sum1\n//" << endl << endl;
+    ofs << "digraph G {\n\n//nodes" << endl;
+
+    ofs << "0 [color = orange, peripheries=2, style = filled, label=\"Empty\"];" << endl;
+    ofs << "1 [color = orange, peripheries=2, style = filled, label=\"Fill A\"];" << endl;
+    ofs << "2 [color = orange, peripheries=2, style = filled, label=\"Fill B\"];" << endl;
+    ofs << "3 [color = orange, peripheries=2, style = filled, label=\"Empty A\"];" << endl;
+    ofs << "4 [color = orange, peripheries=2, style = filled, label=\"Empty B\"];" << endl;
+    ofs << "5 [color = orange, peripheries=2, style = filled, label=\"Pour BA\"];" << endl;
+    ofs << "6 [color = orange, peripheries=2, style = filled, label=\"Pour AB\"];" << endl;
 
 }
 

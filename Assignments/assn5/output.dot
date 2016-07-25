@@ -1,0 +1,23 @@
+// Digraph 
+// assn5 
+// output.dot 
+// cs014_16sum1
+//
+
+digraph G {
+
+//nodes
+0 [color = orange, peripheries=2, style = filled, label="Empty"];
+1 [color = orange, peripheries=2, style = filled, label="Fill A"];
+2 [color = orange, peripheries=2, style = filled, label="Fill B"];
+3 [color = orange, peripheries=2, style = filled, label="Empty A"];
+4 [color = orange, peripheries=2, style = filled, label="Empty B"];
+5 [color = orange, peripheries=2, style = filled, label="Pour BA"];
+6 [color = orange, peripheries=2, style = filled, label="Pour AB"];
+0 -> 2
+2 -> 5
+5 -> 3
+3 -> 5
+5 -> 2
+2 -> 5
+}

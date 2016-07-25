@@ -27,12 +27,13 @@
 
 using namespace std;
 
-class Jug {
+class jug {
 	public:
-		Jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA);
-		int solve();
+		jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA);
+		int solve( ofstream& );
 	private:
-		void bfs(State initial, stack <pair <State, int> >& path);
+		void bfs(State& initial, stack <pair <State, int> >& path);
+		void printNodes( ofstream& );
 		int capacityA;
 		int capacityB;
 		int N;

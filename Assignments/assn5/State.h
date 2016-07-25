@@ -25,6 +25,10 @@ using namespace std;
 
 class State {
 	public:
+		State() {
+			jugA = 0;
+			jugB = 0;
+		}
 		State( int a, int b) {
 			jugA = a;
 			jugB = b;
