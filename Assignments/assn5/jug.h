@@ -28,7 +28,7 @@ using namespace std;
 
 class jug {
 	public:
-		jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA);
+		jug(int, int, int, int, int, int, int, int, int);
 		~jug();
 		// Solve() is used to check the input and find the solution if one exists
 		// returns -1 if the input is invalid.
