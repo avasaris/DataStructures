@@ -24,20 +24,15 @@
 #include <stack>
 #include <utility>
 #include "State.h"
+
 using namespace std;
 
-class jug {
+class Jug {
 	public:
-		jug();
-		jug(int, int, int, int, int, int, int, int, int);
-		//~jug();
-		// Solve() is used to check the input and find the solution if one exists
-		// returns -1 if the input is invalid.
-		// returns 0 if input is valid but a solution does not exist.
-		// returns 1 if solution is found and also prints solution
-		//int Solve();
+		Jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA);
+		int solve();
 	private:
-		//void bfs(State initial, stack <pair <State, int> >& path);
+		void bfs(State initial, stack <pair <State, int> >& path);
 		int capacityA;
 		int capacityB;
 		int N;

@@ -18,15 +18,15 @@
 */
 
 #include <iostream>
-#include "jug.h"
+#include "Jug.h"
 
 using namespace std;
 
 int main() {
 
-	jug j;
+	Jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
 
-	//jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
+	int solution = die_hard.solve();
 
 	return 0;
 }

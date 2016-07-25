@@ -31,6 +31,10 @@ class State {
 		}
 		int jugA;
 		int jugB;
+		bool operator < (const State& that) const {
+	        if (jugA != that.jugA) return jugA < that.jugA;
+	        return jugB < that.jugB;
+	    }
 };
 
 #endif

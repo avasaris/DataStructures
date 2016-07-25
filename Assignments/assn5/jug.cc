@@ -27,26 +27,12 @@
 #include <stack>
 #include <map>
 #include <algorithm>
-#include "jug.h"
+#include "Jug.h"
 #include "State.h"
 
 using namespace std;
 
-jug::jug() {
-
-	capacityA = 3;
-	capacityB = 5;
-	N = 4;
-	fillA = 1;
-	fillB = 1;
-	emptyA = 1;
-	emptyB = 1;
-	pourAB = 1;
-	pourBA = 1;
-
-}
-
-jug::jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA) {
+Jug::Jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA) {
 
 	capacityA = Ca;
 	capacityB = Cb;
@@ -59,19 +45,14 @@ jug::jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA
 	pourBA = pBA;
 
 }
-/*
-jug::~jug() {
 
-	cout << "destructor called..." << endl;
-}
-
-int jug::Solve() {
+int Jug::solve() {
 
 	// Check if input valid 
 	try {
 		assert (capacityA > 0);
 		assert (capacityA <= capacityB);
-		assert (capacityB => N);
+		assert (capacityB >= N);
 		assert (capacityB <= 1000);
 	}
 	catch (int e) {
@@ -111,13 +92,13 @@ int jug::Solve() {
                         break;
             }
 		}
-		cout << Success << path.size()-1 << endl;
+		cout << "Success " << path.size()-1 << endl;
 		return 1;
 	}
 
 }
 
-void bfs( State initial, stack <pair <State, int> >& path ) {
+void Jug::bfs( State initial, stack <pair <State, int> >& path ) {
 
 	// Create an empty Queue
 	queue< State > Q;
@@ -129,7 +110,7 @@ void bfs( State initial, stack <pair <State, int> >& path ) {
 
 	// Push initial to the front of the queue
 	Q.push(initial);
-	previous[initial] = make_pair(start,0);
+	previous[initial] = make_pair(initial,0);
 
 	while (!Q.empty()) {
 		// Pop front of the Queue
@@ -206,9 +187,9 @@ void bfs( State initial, stack <pair <State, int> >& path ) {
 	// push back on the stack to get sequence of rules
 	path.push(make_pair(goal, 0));
 	// initial state (start) is paired with 0
-	while (previous[path.top().first].second != 0) {
-        path.push(previous[path.top().first]);
+	while (previous[(path.top()).first].second != 0) {
+        path.push(previous[(path.top()).first]);
     }
 
-}*/
+}
 
