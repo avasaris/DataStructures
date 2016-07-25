@@ -21,14 +21,30 @@
 
 #include <iostream>
 #include <cassert>
+#include <cstdio>
 #include <utility>
 #include <queue>
 #include <stack>
 #include <map>
+#include <algorithm>
 #include "jug.h"
 #include "State.h"
 
 using namespace std;
+
+jug::jug() {
+
+	capacityA = 3;
+	capacityB = 5;
+	N = 4;
+	fillA = 1;
+	fillB = 1;
+	emptyA = 1;
+	emptyB = 1;
+	pourAB = 1;
+	pourBA = 1;
+
+}
 
 jug::jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA) {
 
@@ -43,8 +59,11 @@ jug::jug(int Ca, int Cb, int N, int fA, int fB, int eA, int eB, int pAB, int pBA
 	pourBA = pBA;
 
 }
+/*
+jug::~jug() {
 
-jug::~jug() {}
+	cout << "destructor called..." << endl;
+}
 
 int jug::Solve() {
 
@@ -191,5 +210,5 @@ void bfs( State initial, stack <pair <State, int> >& path ) {
         path.push(previous[path.top().first]);
     }
 
-}
+}*/
 

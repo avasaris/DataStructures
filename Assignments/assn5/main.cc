@@ -24,7 +24,9 @@ using namespace std;
 
 int main() {
 
-	jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
+	jug j;
+
+	//jug die_hard(3, 5, 4, 1, 1, 1, 1, 1, 1);
 
 	return 0;
 }
