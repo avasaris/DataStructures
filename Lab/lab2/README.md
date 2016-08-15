@@ -32,10 +32,10 @@ test programs or upon the discovery of a bug must be acquired.
 
 Record the line numbers where the lists are at interesting states in which we would want to know more information about
 them for your drawing. Specifically, write down the four line numbers for:
-	* when both lists are done being initially populated with push_front(),
-	* when second_list is set equal to first_list,
-	* after the pair of push_front()’s have been called,
-	* after the pair of push_back()’s have been called.
+* when both lists are done being initially populated with push_front(),
+* when second_list is set equal to first_list,
+* after the pair of push_front()’s have been called,
+* after the pair of push_back()’s have been called.
 
 We will be adding breakpoints directly after these events have occurred. Add a
 breakpoint for all these line numbers now. 
