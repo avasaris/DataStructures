@@ -16,17 +16,20 @@ development.
 Course details
 --------------
 
-**Instructor**: </br>
+**Instructor**: </br> 
 	Ryan Rusich (rusichr@cs.ucr.edu) </br>
 	Office Location: WCH 407. </br>
 	Office Hours: MW 1:00-2:00 PM. </br>
-**TA**: </br>
+
+**TA**: </br> 
 	Joshua Frear (jfrea001@ucr.edu@ucr.edu) </br>
 	Office Location: TBA. </br>
 	Office Hours: TBD. </br>
-**Lecture**:</br>
+
+**Lecture**:</br> 
 	M/T/W/TH 8:10 - 9:30 AM WCH 141 </br>
 	Final exam: Friday 7/22, 8:00am-10:00am </br>
+
 **Lab**:</br>
 	T/TH 10:10 AM - 1:00 PM WCH 127 (Change from 226) </br>
 	
