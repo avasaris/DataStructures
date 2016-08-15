@@ -4,12 +4,12 @@ Lab 6: Binary Heap (Min-heap, Max-heap implementation), Templates, and Heapsort
 
 In this lab you will complete the following tasks.
 
-* Implement the percolateDown function for the BinaryHeap class.
-* Implement the isEmpty function, findMin function, and insert function for the BinaryHeap class.
-* Convert the BinaryHeap class from a min-heap into a max-heap. Do not lose your work! Either rename your working BinaryHeap class, or make a copy and work in separate directory. 
-* Templatize the BinaryHeap class.
+* Implement the **percolateDown** function for the BinaryHeap class.
+* Implement the **isEmpty** function, **findMin** function, and **insert** function for the BinaryHeap class.
+* Convert the BinaryHeap class from a min-heap into a max-heap.
+* **Templatize** the BinaryHeap class.
 * Verify that the BinaryHeap class can handle two types, e.g., strings and ints.
-* Implement the in-place heapsort algorithm presented in class, using your max-heap as the underlying heap data structure. Test heapsort on input of two types. 
+* Implement the in-place **heapsort** algorithm presented in class, using your max-heap as the underlying heap data structure. Test heapsort on input of two types. 
 
 Heapsort
 --------
