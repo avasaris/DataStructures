@@ -8,9 +8,9 @@ Lab 2: Lists & GDB
   	* Copy Constructors: www.fredosaurus.com/notes-cpp/oop-condestructors/copyconstructors.html
   	* Overloaded Assignment Operator: www.fredosaurus.com/notes-cpp/oop-overloading/overloadassign.html
 
-  2. Review GDB_Quick_Reference.pdf:
-  	http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf
-	Reading the following sections.
+  2. Review GDB_Quick_Reference.pdf: </br>
+  	http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf </br>
+	Reading the following sections. 
 	* Essential Commands
 	* Breakpoints and Watchpoints
 	* Program Stack
