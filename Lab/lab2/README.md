@@ -2,14 +2,13 @@ Lab 2: Lists & GDB
 ------------------
 ------------------
 
-<ol>
-  <li> Read the following web pages </li>
+  1. Read the following web pages
   	* Shallow v. Deep Copies: www.fredosaurus.com/notes-cpp/oop-condestructors/shallowdeepcopy.html
   	* Destructor: www.fredosaurus.com/notes-cpp/oop-condestructors/destructors.html
   	* Copy Constructors: www.fredosaurus.com/notes-cpp/oop-condestructors/copyconstructors.html
   	* Overloaded Assignment Operator: www.fredosaurus.com/notes-cpp/oop-overloading/overloadassign.html
 
-  <li> Review GDB_Quick_Reference.pdf: </li>
+  2. Review GDB_Quick_Reference.pdf:
   		http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf
 		Reading the following sections.
 			* Essential Commands
