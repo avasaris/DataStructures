@@ -93,38 +93,39 @@ Note: I reserve the right to raise your final grade, relative to your course per
 General course policies 
 -----------------------
 * **Material covered**: As mentioned above, the course consists of all material covered in lectures, labs, assigned reading, programming assignments, etc. While there is considerable overlap and mutual reinforcement among these elements, they are to be considered separate and individually essential building blocks of your introduction to the art and science of computer programming. That means it's all fair game for the exam!
-* **Programming assignments**: This is a programming course, so the programming assignments are a fundamental component of the course! You will turn in your assignments on-line. Each file should begin with the class_file_header.txt.
-
-Source code should comply with the prescribed coding standards (you will understand these better as the course progresses). You will quickly learn that successfully writing even a fairly simple computer program is not something you
+* **Programming assignments**: This is a programming course, so the programming assignments are a fundamental component of the course! You will turn in your assignments on-line. Each file should begin with the class_file_header.txt. </br> Source code should comply with the prescribed coding standards (you will understand these better as the course progresses). You will quickly learn that successfully writing even a fairly simple computer program is not something you
 can do in just a few minutes. Debugging typically takes several times longer than figuring out how to write the program in the first place. So start work on your programming assignments early. Leaving them to the last minute is a recipe to miss deadlines and fall behind in the course.
 
 * Early/Late Policy:
 	* "Day early/late" is defined as 24 hours before/after its deadline.
 	* **Programming Assignments** - 1 day early - 5 points. Your score must be at least 70/100 to be eligible for these 5 points. Late - No late assignments accepted. Be sure you turn-in often as you complete portions of your assignments. Do not wait until the last minute to turn-in your work in.
-	* **Lab Assignments** - Unfinished exercises can be finished and then demoed in any TA office hours before your next lab meets or at the beginning of the next lab (directly after TA's intro for the lab). 10 points will be deducted for late demos in office hours. 20 points will be deducted for demos in the following week's lab.
+	* **Lab Assignments** - Unfinished exercises can be finished and then demoed in any TA office hours before your next lab meets or at the beginning of the next lab (directly after TA's intro for the lab). 10 points will be deducted for late demos in office hours. 20 points will be deducted for demos in the following week's lab. </br> An assignment will **NOT** be accepted after the late deadline. No exceptions. You should submit your "work-in-progress" at least 6 hours before the deadline - and then resubmit it as often as you like until the deadline. This will help you plan your work, and avoid problems such as a mismatch between your workstation's clock and the server clock, or the inevitable last-minute bandwidth clog.
+	* No makeups will be allowed for bi-weekly exams for any reason. Instead, the lowest bi-weekly exam score will be dropped.
+	* Other issues will be resolved on a case-by-case basis. Most extenuating circumstances will require appropriate documentation, i.e. hospital admittance. As a basic guideline, most problems can be resolved before the fact, and few, if any, can be resolved after the fact.
 
-An assignment will **NOT** be accepted after the late deadline. No exceptions. You should submit your "work-in-progress" at least 6 hours before the deadline - and then resubmit it as often as you like until the deadline. This will help you plan your work, and avoid problems such as a mismatch between your workstation's clock and the server clock, or the inevitable last-minute bandwidth
-clog.
-
-* No makeups will be allowed for bi-weekly exams for any reason. Instead, the lowest bi-weekly exam score will be dropped.
-* Other issues will be resolved on a case-by-case basis. Most extenuating circumstances will require appropriate documentation, i.e. hospital admittance. As a basic guideline, most problems can be resolved before the fact, and few, if any, can be resolved after the fact.
 * **Collaboration policy**: In general, we have found that one of the best predictors of success in CS
-courses is participation in a study group of some kind (this is actually a universal truth). We encourage you to work together and learn from each other in as many ways as possible, and we will provide any assistance we can to make this happen.
-
-**However, we also have to assess each student individually, so there are very explicit boundaries to collaboration.**
+courses is participation in a study group of some kind (this is actually a universal truth). We encourage you to work together and learn from each other in as many ways as possible, and we will provide any assistance we can to make this happen. **However, we also have to assess each student individually, so there are very explicit boundaries to collaboration.**
 	* Bi-Weekly Exams, Final Exam - No collaboration.
 	* In-Class-Exercises - Mostly done in teams requiring active participation.
 	* Lab exercises -- Collaboration is strongly ENCOURAGED. If you complete your lab early, feel free to help others -- teaching others only enhances your own learning.
 	* Programming Assignments -- Collaboration is NEVER ALLOWED. Copying code from ANY outside source (any book, current or past students, past solutions - even if they are your own from last quarter! - web sites, etc.) is STRICTLY FORBIDDEN: we test every submission for copying, and when we find it we treat it as flagrant academic dishonesty (see below).
 
 * **Academic dishonesty** - Cheating of any sort will be punished severely. We use a powerful tool that automatically compares all programs (this quarter and from past quarters too), neglecting changes in variable names, spacing, etc., and detects copied code. If you are smart enough to outwit the tool, you are smart enough to write the program yourself. </br> All forms of cheating, including copying code, lying to an instructor in order to be allowed to make up a test, copying on a quiz, etc., are treated with the same severity. You will be reported to the Student Judicial Affairs office (www.conduct.ucr.edu/Pages/default.aspx), who will conduct an inquiry that usually results in Academic Probation and compulsory Academic Integrity training (see their procedure chart). I normally fail anyone who has been found guilty of any form of academic dishonesty.
+
 * **Regrade policy**: if you believe there is any discrepancy in any grade you receive, please contact the instructor or TA in writing as soon as possible - certainly no later than 2 days after the grade was posted. Your concerns will always be addressed promptly. Make sure you check your grades regularly - click on the "View Grades" link in iLearn.
+
 * **Communicating with the instructors and TAs**: when emailing your instructors or TAs, please remember to give your full name, the course, and your cs login id, using your CS or UCR account. Please be polite and professional, and use reasonable grammar and formatting. In general use the appropriate decorum or etiquette you should for a University level course. The course staffs are not your peers on Facebook.
+
 * Lab attendance is required for the full 2 hour and 50 minute period. If you finish early, the absolute best use of your time is to help others (teaching enhances your own learning) - or you may read ahead, work on your programming assignments etc. No "outsiders" are permitted in the lab during class, i.e., do not bring your friends to CS14 lab.
+
 * Adding/dropping lab and lecture sections: all add, drop, and section changes of all lower division Computer Science courses, after the period when students can do so electronically is over, are done through the College of Engineering's Student Affairs office (student.engr.ucr.edu/), Bourns Hall A159. Neither the instructors nor the CS department itself can sign any add/drop forms.
+
 * **Time requirements**: This is a four-unit CS course. As such, you should expect to spend 6 hours/week in lecture, 6 hours/week in lab, and 12 to 20 hours/week doing individual study (readings, programming, lab preparation, etc.) -- no, we're not exaggerating, that's what it takes!
+
 * **Final exams** are scheduled by the University, not by the instructor, and are correlated to the course sections. This means you must take the final exam scheduled for the section you are enrolled in. The final exam will take place in the same room as your normal lectures.
 * **Final grades**: Per university policy, changes to your final grade can be made only in the event of a clerical error. Asking your instructor how far you were from a cutoff and what extra work you can do to improve the grade is never appropriate. Any correspondence, which aims to circumvent this policy, will be ignored.
+
 * **Laptops, tablets, and cell phones**: To ensure you are a good colleague to your fellow classmates and not a distraction, laptops or tablets must be put away and/or closed and not used during lectures. Cell phones should be silenced before and for the duration of lecture and labs. If you must be on call, set your phone to vibrate and quietly excuse yourself from the room to take a call. No texting during lecture. Recording (audio or video) of the lecture is strictly prohibited.
+
 * **Tardiness** - Students who are habitually late to lecture/lab will have points deducted from the attendance (In-Class-Exercise score for lecture) portion of their lecture/lab grade.
 
