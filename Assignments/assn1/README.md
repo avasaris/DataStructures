@@ -16,16 +16,15 @@ Constructors and Destructor
 ---------------------------
 
   * MyList();
-      
-     Default constructor.
+       <br />Default constructor.
   * MyList(const MyList& str);
-      Constructs a list from a passed in MyList object, i.e. MyList l1(l2);
+       <br />Constructs a list from a passed in MyList object, i.e. MyList l1(l2);
   * MyList(const string& str);
-      Constructs a list from a passed in string object, i.e. string name = "Jake"; MyList l1(name);
+       <br />Constructs a list from a passed in string object, i.e. string name = "Jake"; MyList l1(name);
   * MyList(const char* str);
-      Constructs a list from a passed in string literal, i.e. MyList l1("Hello World");
+       <br />Constructs a list from a passed in string literal, i.e. MyList l1("Hello World");
   * ~MyList();
-      Destructor.
+       <br />Destructor.
       
 Mutators
 --------
