@@ -26,16 +26,16 @@ The first line gives the number of nodes N and a number of edges M (both positiv
 Graph Structure
 ---------------
 
-* Graph.H - Graph class.
-  > vector vertices - A vector containing all of the vertices in the graph. The start vertex is in the first node in the adjacency list.
-  > void build_graph(ifstream& ifs)- Reads the graph input file and instantiates a graph object. Call from within an overloaded Graph constructor which gets passed in an ifstream object (see parameter). Call this overloaded Graph constructor from within your main function.
-  > void output_graph() - Outputs graph object to a graph.dot file.
-  > void bfs()- Breadth First Search. Via a BFS traversal, this function should assign each individual vertex's distance to the number of hops that the vertex is from the start vertex.
-* Vertex.H - Vertex class. 
-  > string label - Individual vertex's label.
-  > int distance - Distance the vertex is from the start vertex.
-  > list<int> neighbors - An STL list of the vertices adjacent to the vertex. The integer value is the neighboring vertex's position in the graph object's vector vertices.
-  > vector<int> neighbors - (Optional) To be used instead of STL list.
+> Graph.H - Graph class.
+  >> vector vertices - A vector containing all of the vertices in the graph. The start vertex is in the first node in the adjacency list.
+  >> void build_graph(ifstream& ifs)- Reads the graph input file and instantiates a graph object. Call from within an overloaded Graph constructor which gets passed in an ifstream object (see parameter). Call this overloaded Graph constructor from within your main function.
+  >> void output_graph() - Outputs graph object to a graph.dot file.
+  >> void bfs()- Breadth First Search. Via a BFS traversal, this function should assign each individual vertex's distance to the number of hops that the vertex is from the start vertex.
+> Vertex.H - Vertex class. 
+  >> string label - Individual vertex's label.
+  >> int distance - Distance the vertex is from the start vertex.
+  >> list<int> neighbors - An STL list of the vertices adjacent to the vertex. The integer value is the neighboring vertex's position in the graph object's vector vertices.
+  >> vector<int> neighbors - (Optional) To be used instead of STL list.
 
 BFS
 ---
