@@ -4,14 +4,10 @@ Lab 2: Lists & GDB
 
 <ol>
   <li> Read the following web pages
-    * Shallow v. Deep Copies:
-    www.fredosaurus.com/notes-cpp/oop-condestructors/shallowdeepcopy.html
-    * Destructor:
-    www.fredosaurus.com/notes-cpp/oop-condestructors/destructors.html
-    * Copy Constructors:
-    www.fredosaurus.com/notes-cpp/oop-condestructors/copyconstructors.html
-    * Overloaded Assignment Operator:
-    www.fredosaurus.com/notes-cpp/oop-overloading/overloadassign.html
+  	* Shallow v. Deep Copies: www.fredosaurus.com/notes-cpp/oop-condestructors/shallowdeepcopy.html
+  	* Destructor: www.fredosaurus.com/notes-cpp/oop-condestructors/destructors.html
+  	* Copy Constructors: www.fredosaurus.com/notes-cpp/oop-condestructors/copyconstructors.html
+  	* Overloaded Assignment Operator: www.fredosaurus.com/notes-cpp/oop-overloading/overloadassign.html
   </li>
 
   <li> Review GDB_Quick_Reference.pdf:
