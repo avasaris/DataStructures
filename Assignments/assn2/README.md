@@ -22,7 +22,8 @@ Algorithm - Find Word Ladder
             Make a copy of the front stack.
             Push the found word onto the copy.
             Enqueue the copy.
-      Dequeue front stack.</code></pre>
+      Dequeue front stack.
+</code></pre>
 
 Implementation
 --------------
