@@ -14,7 +14,7 @@ Algorithm - Find Word Ladder
    Create a queue of stacks.
    Enqueue this stack.
 
-   While the queue is not empty
+   <pre><code>While the queue is not empty
       For each word in the dictionary
          If a word is one letter different (in any position) than the top string of the front stack
             If this word is the end word
@@ -22,7 +22,7 @@ Algorithm - Find Word Ladder
             Make a copy of the front stack.
             Push the found word onto the copy.
             Enqueue the copy.
-      Dequeue front stack.
+      Dequeue front stack.</code></pre>
 
 Implementation
 --------------
