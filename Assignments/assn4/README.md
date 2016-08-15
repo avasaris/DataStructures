@@ -52,12 +52,13 @@ T median( vector<T>& V ) { return select( V, (1+V.size())/2 ); } </pre></code>
 Random Quick Select
 -------------------
 To find select(V,k) via the randomized Quick Select algorithm:
-	* Assert that V is not empty and that k is between 1 and V.size(), inclusively.
-	* Pick a so-called “pivot” value, p, at random from V.
-	* Construct three new vectors L, E, and G containing, respectively, all entries of V that are Less than p, all entries that are Equal to p, and all entries that are Greater than p.
-	* If k <= L.size(), then select(V,k) must be in L, so return select(L,k), which, of course, involves a recursive call to select.
-	* Otherwise, if k <= L.size()+E.size(), then select(V,k) is surely in E, so simply return p.
-	* Otherwise, select(V,k) is surely in G, so decrement k by L.size()+E.size() and return the k-th smallest member of G, which again can be found via a recursive call to select, i.e., return select(G,k-(L.size()+E.size()).
+
+* Assert that V is not empty and that k is between 1 and V.size(), inclusively.
+* Pick a so-called “pivot” value, p, at random from V.
+* Construct three new vectors L, E, and G containing, respectively, all entries of V that are Less than p, all entries that are Equal to p, and all entries that are Greater than p.
+* If k <= L.size(), then select(V,k) must be in L, so return select(L,k), which, of course, involves a recursive call to select.
+* Otherwise, if k <= L.size()+E.size(), then select(V,k) is surely in E, so simply return p.
+* Otherwise, select(V,k) is surely in G, so decrement k by L.size()+E.size() and return the k-th smallest member of G, which again can be found via a recursive call to select, i.e., return select(G,k-(L.size()+E.size()).
 
 Deterministic Quick Select (Blum, Floyd, Rivest, Pratt, Tarjan)
 ---------------------------------------------------------------
@@ -72,20 +73,18 @@ To aid conceptualization, imagine an array whose columns are those quintuples ea
 decreasing order, top to bottom. And imagine that those quintuples are arranged in order of
 increasing median, left to right.
 
-SORTED QUINTUPLES ORDERED BY MEDIANS
-ABOVE -> * * * g g g g
-ABOVE -> * * * g g g g
-MEDIANS -> l ... l ... l p g ... g ... g
-BELOW -> l l l l * * *
-BELOW -> l l l l * * *
+SORTED QUINTUPLES ORDERED BY MEDIANS </br>
+ABOVE -> * * * g g g g</br>
+ABOVE -> * * * g g g g</br>
+MEDIANS -> l ... l ... l p g ... g ... g</br>
+BELOW -> l l l l * * *</br>
+BELOW -> l l l l * * * </br>
 
 Mergesort
 ---------
 ---------
 
-Implement the template functions mergesort and merge as presented in the Weiss text. Do not
-associate them with a class, implement them as utility functions in a file named Mergesort.H. Then
-#include Mergesort.H in your main.cc.
+Implement the template functions mergesort and merge as presented in the Weiss text. Do not associate them with a class, implement them as utility functions in a file named Mergesort.H. Then include Mergesort.H in your main.cc.
 
 We must be able to call your function in the following manner:
 vector<string> result = mergesort(v); – where v is an already defined vector of strings. Similarly,
@@ -114,6 +113,7 @@ below) and references to specific test cases.
 2. What is the average-case running time of the sorting algorithm? Explain.
 3. What is the best-case running time of the sorting algorithm? Explain.
 4. Is the sorting algorithm stable? If not, why?
-Graphs - You should produce plots of input-size v. comparisons, input-size v. data movements,
+
+* Graphs - You should produce plots of input-size v. comparisons, input-size v. data movements,
 input-size v. number of recursive calls for each algorithm and pivot combination. Include your plots
 and their associated data in table format in a single excel file named plots.xls.
