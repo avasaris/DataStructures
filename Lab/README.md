@@ -15,3 +15,7 @@ Contents
 **Lab 4:** binary search tree ADT, webgraphviz
 
 **Lab 5:** hash tables
+
+**Lab 6:** Binary Heap, Templates, and Heapsort
+
+**Lab 7:** Graphs
