@@ -10,8 +10,11 @@ Algorithm - Find Word Ladder
 ----------------------------
 
    Create a stack of strings.
+   
    Push the start word on this stack.
+   
    Create a queue of stacks.
+   
    Enqueue this stack.
 
    <pre><code>While the queue is not empty
