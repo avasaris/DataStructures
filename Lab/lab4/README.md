@@ -2,11 +2,11 @@ Lab 4: BST ADT, Webgraphviz
 ---------------------------
 ---------------------------
 
-In this lab you will develop a program that interactively builds a BST from user input, then outputs the visual representation of the the resulting tree using the drawing software Graphviz (short for Graph Visualization Software). ALL FILES NEEDED ARE ABOVE. There is a framework with sample files (lab4_files.tgz), a document on Graphviz (dotguide.pdf), and a sample running of the working program you will find the in the framework (initial_program_output.txt).
+In this lab you will develop a program that interactively builds a BST from user input, then outputs the visual representation of the the resulting tree using the drawing software Graphviz (short for Graph Visualization Software).
 
 Graphviz Dot files - Graphs (A BST is a directed graph more generally or "digraph") represented in .dot file and can be displayed in the WebGraphviz viewer online at http://webgraphviz.com/ .
 
-Below are several sample dot files. Visually inspect each, by looking at a particular text file, and entering its contents into the WebGraphiz viewer online. This is done by copy-paste into the textbox on the website, then click on the "Generate Graph!" button. If successful, you will see a graphical image-based representation of the inputted file. You should try this now with the four sample files provided to you in the lab4_files.tgz. Also, be sure to run the 5 samples on the Webgraphiz webpage, ("Sample 1," "Sample 2," ...).
+Below are several sample dot files. Visually inspect each, by looking at a particular text file, and entering its contents into the WebGraphiz viewer online. This is done by copy-paste into the textbox on the website, then click on the "Generate Graph!" button. If successful, you will see a graphical image-based representation of the inputted file.
 
 * simple_bst.dot - This file contains the representation for a BST with node labels that indicate each node's key. This is the most basic format for producing a BST using Graphviz. The identifier for each node is that node's label, for example "key25" represents that the node has a key value of 25. This file is statically created (not at run-time) and is for illustrative purposes only.
 * height_color.dot - This file contains the representation for a BST with node labels that indicate each node's key and the node's height in the tree. This file is statically created (not at run-time) and is for illustrative purposes only.
