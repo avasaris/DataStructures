@@ -15,8 +15,8 @@ complete a portion of the program each day.
 Constructors and Destructor
 ---------------------------
 
-  * MyList();
-       <br />Default constructor.
+  * MyList(); <br />
+  		Default constructor.
   * MyList(const MyList& str);
        <br />Constructs a list from a passed in MyList object, i.e. MyList l1(l2);
   * MyList(const string& str);
