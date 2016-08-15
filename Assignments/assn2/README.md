@@ -8,8 +8,8 @@ The program will take as command line arguments the name of the dictionary file,
 
 Algorithm - Find Word Ladder
 ----------------------------
-<pre><code>
-   Create a stack of strings.  <br />
+
+   <pre><code>Create a stack of strings.  <br />
    Push the start word on this stack.  <br />
    Create a queue of stacks.  <br />
    Enqueue this stack.
