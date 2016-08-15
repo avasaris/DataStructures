@@ -109,10 +109,10 @@ Report
 
 For each sorting algorithm answer the following questions. Justify your answers with Graphs (see
 below) and references to specific test cases.
-1. What is the worst-case running time of the sorting algorithm? Explain.
-2. What is the average-case running time of the sorting algorithm? Explain.
-3. What is the best-case running time of the sorting algorithm? Explain.
-4. Is the sorting algorithm stable? If not, why?
+1.What is the worst-case running time of the sorting algorithm? Explain.
+2.What is the average-case running time of the sorting algorithm? Explain.
+3.What is the best-case running time of the sorting algorithm? Explain.
+4.Is the sorting algorithm stable? If not, why?
 
 * Graphs - You should produce plots of input-size v. comparisons, input-size v. data movements,
 input-size v. number of recursive calls for each algorithm and pivot combination. Include your plots
