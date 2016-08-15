@@ -1,8 +1,6 @@
-UCR CS 014: Introduction to Data Structures & Algorithms
---------------------------------------------------------
---------------------------------------------------------
-Summer 2016
------------
+UCR CS 014: Introduction to Data Structures & Algorithms: Summer 2016
+---------------------------------------------------------------------
+---------------------------------------------------------------------
 
 Catalog description
 -------------------
@@ -17,53 +15,49 @@ development.
 
 Course details
 --------------
-	Instructor:
-		Ryan Rusich (rusichr@cs.ucr.edu)
-		Office Location: WCH 407.
-		Office Hours: MW 1:00-2:00 PM.
-	TA:
-		Joshua Frear (jfrea001@ucr.edu@ucr.edu)
-		Office Location: TBA.
-		Office Hours: TBD.
-	Lecture:
-		M/T/W/TH 8:10 - 9:30 AM WCH 141
-		Final exam: Friday 7/22, 8:00am-10:00am
-	Lab:
-		T/TH 10:10 AM - 1:00 PM WCH 127 (Change from 226)
-		
-	Textbook: UCR CS14: Intro Data Structures and Algorithms, Summer 16
-		1. Sign up at zyBooks.com
-		2. Enter zyBook code UCRCS14Summer2016
-		3. Click Subscribe
 
-	Class access:
-		* Your cs account
+Instructor:
+	Ryan Rusich (rusichr@cs.ucr.edu)
+	Office Location: WCH 407.
+	Office Hours: MW 1:00-2:00 PM.
+TA:
+	Joshua Frear (jfrea001@ucr.edu@ucr.edu)
+	Office Location: TBA.
+	Office Hours: TBD.
+Lecture:
+	M/T/W/TH 8:10 - 9:30 AM WCH 141
+	Final exam: Friday 7/22, 8:00am-10:00am
+Lab:
+	T/TH 10:10 AM - 1:00 PM WCH 127 (Change from 226)
+	
+Textbook: UCR CS14: Intro Data Structures and Algorithms, Summer 16
+	1. Sign up at zyBooks.com
+	2. Enter zyBook code UCRCS14Summer2016
+	3. Click Subscribe
 
-		Access to cs labs and the cs intranet requires a cs account: If you are currently enrolled in any cs course, you may request your cs account login name and password here by entering your student.ucr.edu email address, your SID, and your permpin (NOTE: this page can be accessed only from a cs lab). If you have not obtained your account details before the first lab, your TA will assist you in doing so.
-		
-		If for any reason you encounter difficulties regarding your account that your TA cannot resolve, go to the systems admins office (WCH 105). 
-		
-		Keep your password safe - in exactly the same way you would your ATM pin: it is a serious offense to allow others to access your account.
-		
-		**Any student who knowingly allows another to use his or her cs account (either by sharing the account login & password, or by allowing another student access to a computer that is logged in) will be punished to the fullest extent of the University Judicial system.**
-		
-		* Email accounts
-			CS/CE/BUNF majors:
-			Your cs email address will be login@cs.ucr.edu - you can access your cs email via
-			the web here. All department communications will be sent to this address
+Class access:
+	* Your cs account
 
-			All other majors:
-			You will not have a separate cs email account - you will receive all your emails at
-			your student.ucr.edu address.
+	Access to cs labs and the cs intranet requires a cs account: If you are currently enrolled in any cs course, you may request your cs account login name and password here by entering your student.ucr.edu email address, your SID, and your permpin (NOTE: this page can be accessed only from a cs lab). If you have not obtained your account details before the first lab, your TA will assist you in doing so.
+		
+	If for any reason you encounter difficulties regarding your account that your TA cannot resolve, go to the systems admins office (WCH 105). 
+		
+	Keep your password safe - in exactly the same way you would your ATM pin: it is a serious offense to allow others to access your account.
+		
+	**Any student who knowingly allows another to use his or her cs account (either by sharing the account login & password, or by allowing another student access to a computer that is logged in) will be punished to the fullest extent of the University Judicial system.**
+		
+	* Email accounts
+		CS/CE/BUNF majors:
+		Your cs email address will be login@cs.ucr.edu - you can access your cs email via the web here. All department communications will be sent to this address
+
+		All other majors:
+		You will not have a separate cs email account - you will receive all your emails at your student.ucr.edu address.
 			
-			All students:Use your cs or university email for all course-related communication.
-			Generally, emails from other than cs or ucr email accounts will not be responded to.
-			You are expected to observe professional etiquette in all such communications.
+		All students:Use your cs or university email for all course-related communication.
+		Generally, emails from other than cs or ucr email accounts will not be responded to. You are expected to observe professional etiquette in all such communications.
 			
-		* Class web page
-			Everything you need to know about the class, including your grades, will be posted
-			on iLearn (https://ilearn.ucr.edu/). You are expected to check this resource at least
-			once per day for updates during the quarter.
+	* Class web page
+		Everything you need to know about the class, including your grades, will be posted on iLearn (https://ilearn.ucr.edu/). You are expected to check this resource at least once per day for updates during the quarter.
 
 Coursework & Grading
 --------------------
