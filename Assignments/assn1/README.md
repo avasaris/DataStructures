@@ -16,7 +16,8 @@ Constructors and Destructor
 ---------------------------
 
   * MyList();
-      Default constructor.
+      
+     Default constructor.
   * MyList(const MyList& str);
       Constructs a list from a passed in MyList object, i.e. MyList l1(l2);
   * MyList(const string& str);
@@ -29,42 +30,42 @@ Constructors and Destructor
 Mutators
 --------
 
-  • void push front(char value);
+  * void push front(char value);
       Inserts value at the front of the list.
-  • void push back(char value);
+  * void push back(char value);
       Inserts value at the back of the list.
-  • void pop front();
+  * void pop front();
       Removes the front item from the list.
-  • void pop back();
+  * void pop back();
       Removes the last item from the list.
-  • void swap(int i, int j);
+  * void swap(int i, int j);
       Swaps the value of the node at position i in the list with value of the node at position j.
       Be sure you handle out-of-range calls.
-  • void insert at pos(int i, char value);
+  * void insert at pos(int i, char value);
       Inserts a node with value at position i in the list.
-  • void reverse();
+  * void reverse();
       Reverses the items in the list.
 
 Accessors
 ---------
 
-  • int size()const;
+  * int size()const;
       Returns the number of nodes in the list.
-  • void print()const;
+  * void print()const;
       Prints the contents of the list.
-  • int find(char value)const;
+  * int find(char value)const;
       Finds the position of the first occurrence of a character value in the list and returns that position. If the character is not in the list, the function returns -1.
-  • int find(MyList& query str)const;
+  * int find(MyList& query str)const;
       Finds the position of the first occurrence of the MyList query str in the list and returns that position. If query str is not in the list, the function returns -1.
       
 Operator Overloaders
 --------------------
 
-  • MyList& operator=(const MyList& str);
+  * MyList& operator=(const MyList& str);
       For assignment of one list to another, i.e. l1 = l2;
-  • char& operator[](const int i);
+  * char& operator[](const int i);
       Returns the character at position i.
-  • MyList& operator+(const MyList& str);
+  * MyList& operator+(const MyList& str);
       Concatenates two lists together, i.e. l1 + l2;
   
   You can read more about operator overloading here:
