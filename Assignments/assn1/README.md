@@ -15,15 +15,15 @@ complete a portion of the program each day.
 Constructors and Destructor
 ---------------------------
 
-  • MyList();
+  * MyList();
       Default constructor.
-  • MyList(const MyList& str);
+  * MyList(const MyList& str);
       Constructs a list from a passed in MyList object, i.e. MyList l1(l2);
-  • MyList(const string& str);
+  * MyList(const string& str);
       Constructs a list from a passed in string object, i.e. string name = "Jake"; MyList l1(name);
-  • MyList(const char* str);
+  * MyList(const char* str);
       Constructs a list from a passed in string literal, i.e. MyList l1("Hello World");
-  • ~MyList();
+  * ~MyList();
       Destructor.
       
 Mutators
