@@ -9,12 +9,12 @@ Lab 2: Lists & GDB
   	* Overloaded Assignment Operator: www.fredosaurus.com/notes-cpp/oop-overloading/overloadassign.html
 
   2. Review GDB_Quick_Reference.pdf:
-  		http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf
-		Reading the following sections.
-			* Essential Commands
-			* Breakpoints and Watchpoints
-			* Program Stack
-			* Execution Control
+  	http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf
+	Reading the following sections.
+	* Essential Commands
+	* Breakpoints and Watchpoints
+	* Program Stack
+	* Execution Control
 	
 If you need additional help understanding GDB read through the following:
 	http://www.yolinux.com/TUTORIALS/GDB-Commands.html
