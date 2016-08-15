@@ -8,13 +8,13 @@ The program will take as command line arguments the name of the dictionary file,
 
 Algorithm - Find Word Ladder
 ----------------------------
-
+<pre><code>
    Create a stack of strings.  <br />
    Push the start word on this stack.  <br />
    Create a queue of stacks.  <br />
    Enqueue this stack.
 
-   <pre><code>While the queue is not empty
+   While the queue is not empty
       For each word in the dictionary
          If a word is one letter different (in any position) than the top string of the front stack
             If this word is the end word
