@@ -16,29 +16,28 @@ development.
 Course details
 --------------
 
-Instructor:
-	Ryan Rusich (rusichr@cs.ucr.edu)
-	Office Location: WCH 407.
-	Office Hours: MW 1:00-2:00 PM.
-TA:
-	Joshua Frear (jfrea001@ucr.edu@ucr.edu)
-	Office Location: TBA.
-	Office Hours: TBD.
-Lecture:
-	M/T/W/TH 8:10 - 9:30 AM WCH 141
-	Final exam: Friday 7/22, 8:00am-10:00am
-Lab:
-	T/TH 10:10 AM - 1:00 PM WCH 127 (Change from 226)
+Instructor: </br>
+	Ryan Rusich (rusichr@cs.ucr.edu) </br>
+	Office Location: WCH 407. </br>
+	Office Hours: MW 1:00-2:00 PM. </br>
+TA: </br>
+	Joshua Frear (jfrea001@ucr.edu@ucr.edu) </br>
+	Office Location: TBA. </br>
+	Office Hours: TBD. </br>
+Lecture:</br>
+	M/T/W/TH 8:10 - 9:30 AM WCH 141 </br>
+	Final exam: Friday 7/22, 8:00am-10:00am </br>
+Lab:</br>
+	T/TH 10:10 AM - 1:00 PM WCH 127 (Change from 226) </br>
 	
-Textbook: UCR CS14: Intro Data Structures and Algorithms, Summer 16
+Textbook: UCR CS14: Intro Data Structures and Algorithms, Summer 16 </br>
 	1. Sign up at zyBooks.com
 	2. Enter zyBook code UCRCS14Summer2016
 	3. Click Subscribe
 
 Class access:
-	* Your cs account
-
-	Access to cs labs and the cs intranet requires a cs account: If you are currently enrolled in any cs course, you may request your cs account login name and password here by entering your student.ucr.edu email address, your SID, and your permpin (NOTE: this page can be accessed only from a cs lab). If you have not obtained your account details before the first lab, your TA will assist you in doing so.
+* Your cs account
+	</br> Access to cs labs and the cs intranet requires a cs account: If you are currently enrolled in any cs course, you may request your cs account login name and password here by entering your student.ucr.edu email address, your SID, and your permpin (NOTE: this page can be accessed only from a cs lab). If you have not obtained your account details before the first lab, your TA will assist you in doing so.
 		
 	If for any reason you encounter difficulties regarding your account that your TA cannot resolve, go to the systems admins office (WCH 105). 
 		
@@ -46,17 +45,17 @@ Class access:
 		
 	**Any student who knowingly allows another to use his or her cs account (either by sharing the account login & password, or by allowing another student access to a computer that is logged in) will be punished to the fullest extent of the University Judicial system.**
 		
-	* Email accounts
-		CS/CE/BUNF majors:
-		Your cs email address will be login@cs.ucr.edu - you can access your cs email via the web here. All department communications will be sent to this address
+* Email accounts
+	</br>CS/CE/BUNF majors:
+	</br>Your cs email address will be login@cs.ucr.edu - you can access your cs email via the web here. All department communications will be sent to this address
 
-		All other majors:
-		You will not have a separate cs email account - you will receive all your emails at your student.ucr.edu address.
+	All other majors:
+	</br>You will not have a separate cs email account - you will receive all your emails at your student.ucr.edu address.
 			
-		All students:Use your cs or university email for all course-related communication.
-		Generally, emails from other than cs or ucr email accounts will not be responded to. You are expected to observe professional etiquette in all such communications.
+	All students:Use your cs or university email for all course-related communication.
+	</br>Generally, emails from other than cs or ucr email accounts will not be responded to. You are expected to observe professional etiquette in all such communications.
 			
-	* Class web page
+* Class web page
 		Everything you need to know about the class, including your grades, will be posted on iLearn (https://ilearn.ucr.edu/). You are expected to check this resource at least once per day for updates during the quarter.
 
 Coursework & Grading
@@ -125,4 +124,4 @@ courses is participation in a study group of some kind (this is actually a unive
 * **Final grades**: Per university policy, changes to your final grade can be made only in the event of a clerical error. Asking your instructor how far you were from a cutoff and what extra work you can do to improve the grade is never appropriate. Any correspondence, which aims to circumvent this policy, will be ignored.
 * **Laptops, tablets, and cell phones**: To ensure you are a good colleague to your fellow classmates and not a distraction, laptops or tablets must be put away and/or closed and not used during lectures. Cell phones should be silenced before and for the duration of lecture and labs. If you must be on call, set your phone to vibrate and quietly excuse yourself from the room to take a call. No texting during lecture. Recording (audio or video) of the lecture is strictly prohibited.
 * **Tardiness** - Students who are habitually late to lecture/lab will have points deducted from the attendance (In-Class-Exercise score for lecture) portion of their lecture/lab grade.
-* 
+
